@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Si Jobs</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="remember">remember me</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+
+</resources>
