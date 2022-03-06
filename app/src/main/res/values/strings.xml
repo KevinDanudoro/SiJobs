@@ -7,5 +7,20 @@
     <string name="facebook">Facebook</string>
     <string name="twitter">Twitter</string>
     <string name="instagram">Instagram</string>
+    <string name="new_profile">New Profile!</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="your_date_of_birth">Your date of Birth</string>
+    <string name="your_email">Your email</string>
+    <string name="save">Save</string>
+    <string name="address">Address</string>
+    <string name="your_address">Your address</string>
+    <string name="gender">Gender</string>
+    <string name="your_name">Your name</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 
 </resources>
