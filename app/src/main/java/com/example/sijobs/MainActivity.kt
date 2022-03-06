@@ -3,23 +3,33 @@ package com.example.sijobs
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_login.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var btnlogin : Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_login)
 
-        btnlogin = findViewById(R.id.button)
-        btnlogin.setOnClickListener {
+
+        // Fitur Pindah halaman ke ActivityNewProfile
+        button.setOnClickListener {
+            // ubah editable text ke string
+            val username = usernameInput.text.toString()
+            val password = passInput.text.toString()
+
+            // Buat intent untuk mengarahkan activity ini ke newProfileActivity
             Intent(this, NewProfileActivity::class.java).also{
-                startActivity(it)
+                // Pasangan antara key dan value untuk mengirimkan data pada editable text ke activity lain
+                it.putExtra("USERNAME", username)
+                it.putExtra("PASSWORD", password)
+
+                startActivity(it) // Pindah ke halaman yg diatur Intent
             }
         }
+        // Akhir fitur pindah halaman ke ActivityNewProfile
+
+
 
     }
 }
