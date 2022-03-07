@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             val password = passInput.text.toString()
 
             // Buat intent untuk mengarahkan activity ini ke newProfileActivity
-            Intent(this, NewProfileActivity::class.java).also{
+            Intent(this, ProfileActivity::class.java).also{
                 // Pasangan antara key dan value untuk mengirimkan data pada editable text ke activity lain
                 it.putExtra("USERNAME", username)
                 it.putExtra("PASSWORD", password)
