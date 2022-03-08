@@ -19,29 +19,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_defaultprofile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:cardCornerRadius="100dp"
+        android:src="@drawable/im_defaultprofile"
         app:layout_constraintBottom_toTopOf="@+id/et_name"
         app:layout_constraintEnd_toEndOf="@+id/et_name"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/im_defaultprofile" />
 
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
-        app:layout_constraintEnd_toEndOf="@+id/cardView3">
+        app:layout_constraintBottom_toBottomOf="@id/civ_defaultprofile"
+        app:layout_constraintEnd_toEndOf="@id/civ_defaultprofile">
 
         <ImageView
             android:layout_width="30dp"
