@@ -186,15 +186,18 @@
     <Button
         android:id="@+id/btn_save"
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/shape_login_btn"
         android:backgroundTint="#171717"
         android:fontFamily="@font/roboto"
         android:text="@string/save"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_address" />
+        app:layout_constraintTop_toBottomOf="@+id/et_address"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
