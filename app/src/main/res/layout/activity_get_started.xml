@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetStartedActivity">
+
+    <ImageView
+        android:id="@+id/iv_bottomcircle"
+        android:layout_width="435dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_model"
+        app:layout_constraintVertical_bias="0.52"
+        tools:srcCompat="@drawable/ellipse_759" />
+
+    <ImageView
+        android:id="@+id/iv_halfcircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_model"
+        app:srcCompat="@drawable/ellipse_half" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_model"
+        app:layout_constraintEnd_toEndOf="@+id/iv_model"
+        app:layout_constraintStart_toStartOf="@+id/iv_model"
+        app:srcCompat="@drawable/ellipse_shadow" />
+
+    <ImageView
+        android:id="@+id/iv_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/model" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/iv_model"
+        app:layout_constraintEnd_toStartOf="@+id/iv_halfcircle"
+        app:layout_constraintStart_toEndOf="@+id/iv_model"
+        app:srcCompat="@drawable/ellipse_yellow" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:text="SI JOBS"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_model"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:text="It's not just a Job"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_bottomcircle" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="87dp"
+        android:src="@drawable/rectangle_63"
+        app:layout_constraintBottom_toBottomOf="@id/tv_tagline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_tagline1" />
+
+    <TextView
+        android:id="@+id/tv_tagline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:text="It's an Experience"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/tv_tagline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline" />
+
+    <Button
+        android:id="@+id/btn_started"
+        android:layout_width="170dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_yellow"
+        android:text="Get Started"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:drawableEnd="@drawable/frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline1"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
