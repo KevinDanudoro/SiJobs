@@ -27,7 +27,7 @@ class NewProfileActivity : AppCompatActivity() {
 
         val dpd = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { datePicker, mYear, mMonth, mDay ->
             //set to edittext
-            binding.etDateofBirth.setText(""+ mDay +"/"+mMonth+"/"+mYear)
+            binding.etDateofBirth.setText("$mDay/$mMonth/$mYear")
         },year,month, day)
         dpd.show();
     }

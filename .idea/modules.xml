@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Si Jobs.Si_Jobs.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Si Jobs.Si_Jobs.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Si_Jobs.iml" filepath="$PROJECT_DIR$/.idea/modules/Si_Jobs.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Si_Jobs.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Si_Jobs.app.iml" />
     </modules>
