@@ -113,7 +113,7 @@
 
     <ImageView
         android:id="@+id/iv_linet"
-        android:layout_width="450dp"
+        android:layout_width="0dp"
         android:layout_height="7dp"
         android:src="@drawable/shape_linesearcht"
         android:layout_marginTop="50dp"
