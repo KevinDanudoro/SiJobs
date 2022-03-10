@@ -13,31 +13,36 @@ class ProfileActivity : AppCompatActivity() {
     // Binding
     private lateinit var binding: ActivityProfileBinding
 
-    // Firebase
-    private lateinit var firebaseAuth: FirebaseAuth
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        // Pindah ke halaman Change Profile
+        binding.changeProfile.setOnClickListener { toChangeProfile() }
 
-//        checkUser()
-        binding.logout.setOnClickListener {
-            firebaseAuth.signOut()
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
+
+        // Cek user masih login apa sudah logout
+        checkUser()
+        // Jika user logout maka
+        binding.logout.setOnClickListener { userLogout() }
+    }
+
+    private fun toChangeProfile() {
+        startActivity(Intent(this, NewProfileActivity::class.java))
+    }
+
+    private fun userLogout() {
+        FirebaseAuth.getInstance().signOut()
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
     }
 
     private fun checkUser() {
-        val firebaseUser = firebaseAuth.currentUser
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
         if(firebaseUser == null){
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-        }
-        else{
-            Toast.makeText(this, "Selamat anda berhasil login dengan username ${firebaseUser.email}", Toast.LENGTH_LONG).show()
         }
     }
 }

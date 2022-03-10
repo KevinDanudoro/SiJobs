@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/civ_defaultprofile"
+        android:id="@+id/profile_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/im_defaultprofile"
@@ -35,11 +35,12 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="@id/civ_defaultprofile"
-        app:layout_constraintEnd_toEndOf="@id/civ_defaultprofile">
+        app:layout_constraintBottom_toBottomOf="@id/profile_image"
+        app:layout_constraintEnd_toEndOf="@id/profile_image">
 
         <ImageView
-            android:layout_width="30dp"
+            android:id="@+id/add_image"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             app:srcCompat="@drawable/plusicon" />
 

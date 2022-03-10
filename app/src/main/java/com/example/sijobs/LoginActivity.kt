@@ -50,16 +50,19 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validasiData() {
         // trim() memotong spasi di awal dan akhir kalimat pada string
-        username = binding.usernameInput.text.toString().trim()
+        username = binding.emailInput.text.toString().trim()
         password = binding.passInput.text.toString().trim()
+        var isError = false
 
         if(TextUtils.isEmpty(username)){
-            binding.usernameInput.error = "Please Enter The Username"
+            binding.emailInput.error = "Mohon masukkan email"
+            isError = true
         }
-        else if(TextUtils.isEmpty(password)){
-            binding.passInput.error = "Please Enter The Password"
+        if(TextUtils.isEmpty(password)){
+            binding.passInput.error = "Mohon masukkan password"
+            isError = true
         }
-        else{
+        if(!isError){
             firebaseLogin()
         }
     }

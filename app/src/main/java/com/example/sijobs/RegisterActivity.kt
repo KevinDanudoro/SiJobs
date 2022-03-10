@@ -17,7 +17,6 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
     // Firebase
-    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var username: String
     private lateinit var password: String
 
@@ -26,9 +25,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Inisialisasi FirebaseAuth
-        firebaseAuth = FirebaseAuth.getInstance()
 
         // Interaksi tombol register
         binding.button.setOnClickListener {
@@ -41,39 +37,47 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-
+    // Validasi data email dan password sebelum di register
     private fun validasiData() {
-        username = binding.usernameInput.text.toString().trim()
+        username = binding.emailInput.text.toString().trim()
         password = binding.passInput.text.toString().trim()
+        var isError = false
 
         if(TextUtils.isEmpty(username)){
-            binding.usernameInput.error = "Please Enter The Username"
-        }
-        else if(TextUtils.isEmpty(password)){
-            binding.passInput.error = "Please Enter The Password"
+            binding.emailInput.error = "Mohon masukkan email"
+            isError = true
         }
         else if(!Patterns.EMAIL_ADDRESS.matcher(username).matches()){
-            binding.usernameInput.error = "Format Penulisan Email Tidak Sesuai"
+            binding.emailInput.error = "Format Penulisan Email Tidak Sesuai"
+            isError = true
+        }
+
+        if(TextUtils.isEmpty(password)){
+            binding.passInput.error = "Mohon masukkan password"
+            isError = true
         }
         else if(password.length < 6){
             binding.passInput.error = "Password Terlalu Lemah (min 7 karakter)"
+            isError = true
         }
-        else{
+        if(!isError){
             firebaseRegister()
         }
     }
 
-
+    // Membaut akun di firebase berdasarkan input email dan password yang dimasukkan
     private fun firebaseRegister() {
-        firebaseAuth.createUserWithEmailAndPassword(username, password)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
             .addOnSuccessListener {
-                val email = firebaseAuth.currentUser!!.email
+                // Jika register berhasil
+                val email = FirebaseAuth.getInstance().currentUser!!.email
                 Toast.makeText(this, "Berhasil registrasi menggunakan username $email", Toast.LENGTH_LONG).show()
 
                 startActivity(Intent(this, ProfileActivity::class.java))
                 finish()
             }
             .addOnFailureListener{
+                // Jika register gagal
                 Toast.makeText(this, "Gagal melakukan registrasi sebab ${it.message}", Toast.LENGTH_LONG).show()
             }
     }
