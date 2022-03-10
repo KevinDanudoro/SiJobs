@@ -15,8 +15,7 @@
         android:layout_marginEnd="78dp"
         android:layout_marginTop="25dp"
         android:autofillHints=""
-        android:background="@drawable/bubblestroke"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/bg_search1"
         android:fontFamily="@font/roboto"
         android:hint="Find your new job now"
         android:inputType="text"
@@ -25,22 +24,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="45dp"
+    <ImageView
+        android:layout_width="48dp"
         android:layout_height="45dp"
         android:layout_marginEnd="25dp"
-        app:cardCornerRadius="10dp"
-        android:background="@drawable/bubblestroke"
+        app:srcCompat="@drawable/ic_search"
         app:layout_constraintBottom_toBottomOf="@+id/et_search"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/et_search">
+        app:layout_constraintTop_toTopOf="@+id/et_search"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_search"
-            android:layout_gravity="center"/>
-    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/tv_pengasuh"
