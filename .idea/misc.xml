@@ -20,6 +20,8 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_linesearcht.xml" value="0.1815" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_login_box.xml" value="0.2075" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_login_btn.xml" value="0.2075" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_profile_box.xml" value="0.182" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_swipe_skill.xml" value="0.182" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/font/inter.xml" value="0.17400598546387344" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_get_started.xml" value="0.33" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -28,6 +30,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_profile.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_search.xml" value="0.18" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_add_skill.xml" value="0.22" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/bg_search1.xml" value="0.201" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_get_started.xml" value="0.161231884057971" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.16394927536231885" />
