@@ -43,7 +43,7 @@ class LoginActivity : AppCompatActivity() {
     private fun checkUser() {
         val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser != null){
-            startActivity(Intent(this, ProfileActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
@@ -72,7 +72,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 // Login Berhasil
                 Toast.makeText(this, "Login berhasil sebagai $username", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this, ProfileActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener{
