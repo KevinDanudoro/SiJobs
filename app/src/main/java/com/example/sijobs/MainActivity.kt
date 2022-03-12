@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val chatFragment = ChatFragment()
         val profileFragment = ProfileFragment()
 
+        // to set homeFragment as main fragment
         setCurrentFragment(homeFragment)
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
