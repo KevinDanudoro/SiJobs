@@ -15,9 +15,8 @@ class LoginActivity : AppCompatActivity() {
 
     // Firebase
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var username: String
+    private lateinit var email: String
     private lateinit var password: String
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +49,11 @@ class LoginActivity : AppCompatActivity() {
 
     private fun validasiData() {
         // trim() memotong spasi di awal dan akhir kalimat pada string
-        username = binding.emailInput.text.toString().trim()
+        email = binding.emailInput.text.toString().trim()
         password = binding.passInput.text.toString().trim()
         var isError = false
 
-        if(TextUtils.isEmpty(username)){
+        if(TextUtils.isEmpty(email)){
             binding.emailInput.error = "Mohon masukkan email"
             isError = true
         }
@@ -68,16 +67,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun firebaseLogin() {
-        firebaseAuth.signInWithEmailAndPassword(username, password)
+        firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 // Login Berhasil
-                Toast.makeText(this, "Login berhasil sebagai $username", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Login berhasil sebagai $email", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener{
                 // Login Gagal
-                Toast.makeText(this, "Username atau Password salah", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Email atau Password salah", Toast.LENGTH_LONG).show()
             }
     }
 

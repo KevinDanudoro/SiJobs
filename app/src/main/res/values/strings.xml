@@ -18,7 +18,7 @@
     <string name="your_address">Your address</string>
     <string name="gender">Gender</string>
     <string name="your_name">Your name</string>
-    <string name="not_account">Don\'t have an account? <b>Sign In</b> </string>
+    <string name="not_account">Don\'t have an account? <b>Sign Up</b> </string>
     <string name="sign_up">Sign Up</string>
 
     <string-array name="gender">

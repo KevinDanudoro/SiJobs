@@ -50,6 +50,8 @@ class NewProfileActivity : AppCompatActivity() {
 
                 ref.downloadUrl.addOnSuccessListener {
                     Log.d("NewProfileActivity", "Gambar dapat di download melalui link: $it")
+
+
                 }
             }
             .addOnFailureListener{

@@ -5,10 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
+import android.widget.Spinner
 import android.widget.Toast
+import androidx.core.view.get
 import com.example.sijobs.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -16,9 +20,13 @@ class RegisterActivity : AppCompatActivity() {
     // Binding
     private lateinit var binding: ActivityRegisterBinding
 
-    // Firebase
-    private lateinit var username: String
+    // Data user
+    private lateinit var email: String
     private lateinit var password: String
+    private lateinit var username: String
+    private lateinit var dateOfBirth: String
+    private lateinit var gender: String
+    private lateinit var address: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,46 +47,80 @@ class RegisterActivity : AppCompatActivity() {
 
     // Validasi data email dan password sebelum di register
     private fun validasiData() {
-        username = binding.emailInput.text.toString().trim()
+        email = binding.emailInput.text.toString().trim()
         password = binding.passInput.text.toString().trim()
+        username = binding.usernameInput.text.toString().trim()
+        dateOfBirth = binding.birthInput.text.toString().trim()
+        gender = binding.spGender.selectedItem.toString()
+        address = binding.addressInput.text.toString().trim()
+
         var isError = false
 
-        if(TextUtils.isEmpty(username)){
-            binding.emailInput.error = "Mohon masukkan email"
+        if(TextUtils.isEmpty(email)){
+            binding.emailInput.error = "Please enter your email"
             isError = true
         }
-        else if(!Patterns.EMAIL_ADDRESS.matcher(username).matches()){
-            binding.emailInput.error = "Format Penulisan Email Tidak Sesuai"
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            binding.emailInput.error = "Email format is wrong"
             isError = true
         }
 
         if(TextUtils.isEmpty(password)){
-            binding.passInput.error = "Mohon masukkan password"
+            binding.passInput.error = "Please enter your password"
             isError = true
         }
         else if(password.length < 6){
-            binding.passInput.error = "Password Terlalu Lemah (min 7 karakter)"
+            binding.passInput.error = "Password at least has 7 character"
             isError = true
         }
+
+        if(TextUtils.isEmpty(username)){
+            binding.usernameInput.error = "Please enter your username"
+            isError = true
+        }
+
+        if(TextUtils.isEmpty(dateOfBirth)){
+            dateOfBirth = ""
+        }
+
+        if(TextUtils.isEmpty(address)){
+            address = ""
+        }
+
         if(!isError){
             firebaseRegister()
         }
     }
 
-    // Membaut akun di firebase berdasarkan input email dan password yang dimasukkan
+    // Membuat akun di firebase berdasarkan input email dan password yang dimasukkan
     private fun firebaseRegister() {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(username, password)
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 // Jika register berhasil
                 val email = FirebaseAuth.getInstance().currentUser!!.email
-                Toast.makeText(this, "Berhasil registrasi menggunakan username $email", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Berhasil registrasi menggunakan email $email", Toast.LENGTH_LONG).show()
+                saveUserToDatabase()
 
-                startActivity(Intent(this, ProfileActivity::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener{
                 // Jika register gagal
                 Toast.makeText(this, "Gagal melakukan registrasi sebab ${it.message}", Toast.LENGTH_LONG).show()
+            }
+    }
+
+    private fun saveUserToDatabase() {
+        val uid = FirebaseAuth.getInstance().currentUser!!.uid
+        val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/users/$uid")
+
+        val user = UserData(uid, email, username, dateOfBirth, gender, address, "")
+        ref.setValue(user)
+            .addOnSuccessListener {
+                Log.d("Register", "Data $username berhasil disimpan")
+            }
+            .addOnFailureListener {
+                Log.d("Register", "Data $username gagal disimpan")
             }
     }
 
@@ -97,4 +139,5 @@ class RegisterActivity : AppCompatActivity() {
         },year,month, day)
         dpd.show()
     }
+
 }
