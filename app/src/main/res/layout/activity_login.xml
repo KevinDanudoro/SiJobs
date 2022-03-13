@@ -14,7 +14,7 @@
         android:layout_marginTop="4dp"
         android:fontFamily="@font/inter_bold"
         android:text="Welcome to SI JOBS"
-        android:textColor="@color/primary_white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,16 +76,6 @@
             app:layout_constraintTop_toBottomOf="@+id/emailInput"
             tools:ignore="TextContrastCheck" />
 
-        <CheckBox
-            android:id="@+id/remember"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layoutDirection="ltr"
-            android:minHeight="48dp"
-            android:text="@string/remember"
-            android:textColor="#546E7A"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passInput" />
 
         <View
             android:id="@+id/line1"
@@ -111,7 +101,7 @@
             android:id="@+id/orView"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="#F9F9F9"
             android:gravity="center_vertical"
             android:paddingHorizontal="10dp"
@@ -119,7 +109,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/remember" />
+            app:layout_constraintTop_toBottomOf="@+id/passInput" />
 
         <ImageView
             android:id="@+id/ic_fb"
