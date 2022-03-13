@@ -26,12 +26,7 @@ class MainActivity : AppCompatActivity() {
         val profileFragment = ProfileFragment()
 
         // to set homeFragment as main fragment
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fl_Fragmment, homeFragment)
-            addToBackStack(null)
-            commit()
-        }
-
+        setCurrentFragment(homeFragment)
 
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){

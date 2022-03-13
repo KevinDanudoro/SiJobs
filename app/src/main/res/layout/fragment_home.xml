@@ -6,15 +6,222 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tv_profilePic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/im_profile"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Hey, Katheryn"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profilePic"
+        app:layout_constraintStart_toEndOf="@+id/tv_profilePic"
+        app:layout_constraintTop_toTopOf="@+id/tv_profilePic" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_searchhome"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_profilePic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_profilePic" />
+
+    <TextView
+        android:id="@+id/tv_discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Let's discover your"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_profilePic"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profilePic" />
+
+    <TextView
+        android:id="@+id/tv_partjob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="part job"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_discover"
+        app:layout_constraintTop_toBottomOf="@+id/tv_discover" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_1h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_partjob">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv1h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_2h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cv_3h"
+        app:layout_constraintStart_toEndOf="@+id/cv_1h"
+        app:layout_constraintTop_toTopOf="@+id/cv_1h" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv2h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_3h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="40dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv_2h" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv3h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_4h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="@+id/cv_1h"
+        app:layout_constraintTop_toBottomOf="@+id/cv_1h" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv4h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_5h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/cv_6h"
+        app:layout_constraintStart_toEndOf="@+id/cv_4h"
+        app:layout_constraintTop_toTopOf="@+id/cv_4h" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv5h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_6h"
+        android:layout_width="85dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="108dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/cv_3h"
+        app:layout_constraintTop_toTopOf="@+id/cv_5h" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/im_cv6h"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="History"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_partjob"
+        app:layout_constraintTop_toBottomOf="@+id/cv_4h" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:textSize="100sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/roboto_bold"
+        android:text="View all"
+        android:textSize="12sp"
+        android:textColor="@color/primary_yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_history"
+        app:layout_constraintEnd_toEndOf="@+id/iv_search"
+        app:layout_constraintTop_toTopOf="@+id/tv_history" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_history">
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/black">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/black">
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="130dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="@color/black">
+
+        </androidx.cardview.widget.CardView>
+        
+        
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
