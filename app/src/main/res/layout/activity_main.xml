@@ -19,8 +19,6 @@
         android:background="@drawable/bg_bottomnavigation"
         app:menu="@menu/menu_btm_nav"
         app:labelVisibilityMode="labeled"
-        app:itemIconTint="@drawable/item_selector"
-        app:itemTextColor="@drawable/item_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
