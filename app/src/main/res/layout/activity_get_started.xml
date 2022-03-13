@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_model"
         app:layout_constraintVertical_bias="0.52"
-        tools:srcCompat="@drawable/ellipse_759" />
+        android:src="@drawable/ellipse_759" />
 
     <ImageView
         android:id="@+id/iv_halfcircle"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/ellipse_half" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/iv_modelShadow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/iv_model"
@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/model" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/iv_yellowcircle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/iv_model"
@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/ellipse_yellow" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/tv_sijobs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
