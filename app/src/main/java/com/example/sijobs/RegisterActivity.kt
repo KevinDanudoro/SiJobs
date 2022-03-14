@@ -23,6 +23,9 @@ class RegisterActivity : AppCompatActivity() {
     // Data user
     private lateinit var email: String
     private lateinit var password: String
+
+    // Apa username perlu diinputkan pada app freelancer?
+    // Mending first name aja ga sih?
     private lateinit var username: String
     private lateinit var dateOfBirth: String
     private lateinit var gender: String
