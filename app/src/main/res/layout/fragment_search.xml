@@ -13,7 +13,7 @@
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="78dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="30dp"
         android:autofillHints=""
         android:background="@drawable/bg_search1"
         android:fontFamily="@font/roboto"
@@ -34,19 +34,28 @@
         app:layout_constraintTop_toTopOf="@+id/et_search"/>
 
 
+    <ImageView
+        android:id="@+id/iv_time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_time1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_search"/>
 
     <TextView
         android:id="@+id/tv_pengasuh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
         android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Pengasuh anak"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_search" />
+        app:layout_constraintStart_toEndOf="@+id/iv_time1"
+        app:layout_constraintTop_toTopOf="@id/iv_time1"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_time1"/>
 
     <ImageView
         android:id="@+id/iv_line"
@@ -58,18 +67,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_pengasuh"/>
 
+    <ImageView
+        android:id="@+id/iv_time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_time1"
+        app:layout_constraintStart_toStartOf="@id/iv_time1"
+        app:layout_constraintTop_toBottomOf="@id/iv_line"/>
+
     <TextView
         android:id="@+id/tv_designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
         android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Designer logo"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_line" />
+        app:layout_constraintStart_toEndOf="@id/iv_time2"
+        app:layout_constraintTop_toTopOf="@id/iv_time2"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_time2"/>
 
     <ImageView
         android:id="@+id/iv_line1"
@@ -81,18 +99,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_designer"/>
 
+    <ImageView
+        android:id="@+id/iv_time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_time1"
+        app:layout_constraintStart_toStartOf="@id/iv_time2"
+        app:layout_constraintTop_toBottomOf="@id/iv_line1"/>
+
     <TextView
         android:id="@+id/tv_urusan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
         android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Urusan rumah"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_line1" />
+        app:layout_constraintStart_toEndOf="@id/iv_time3"
+        app:layout_constraintTop_toTopOf="@id/iv_time3"
+        app:layout_constraintBottom_toBottomOf="@id/iv_time3"/>
 
     <ImageView
         android:id="@+id/iv_line2"
@@ -104,28 +131,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_urusan"/>
 
-    <ImageView
-        android:id="@+id/iv_linet"
-        android:layout_width="0dp"
-        android:layout_height="7dp"
-        android:src="@drawable/shape_linesearcht"
-        android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_line2"/>
 
     <TextView
         android:id="@+id/tv_jobesuggest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:textSize="15sp"
         android:fontFamily="@font/roboto_medium"
         android:text="Job type suggestion"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_linet" />
+        app:layout_constraintTop_toBottomOf="@id/iv_line2" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_1"
