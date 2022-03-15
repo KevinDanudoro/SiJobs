@@ -25,7 +25,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_swipe_skill.xml" value="0.182" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/font/inter.xml" value="0.17400598546387344" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_get_started.xml" value="0.33" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_new_profile.xml" value="0.22" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_profile.xml" value="0.25" />
@@ -33,7 +33,6 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_search.xml" value="0.18" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_add_skill.xml" value="0.22" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_chat.xml" value="0.142368533561351" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_home.xml" value="0.142368533561351" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_payment.xml" value="0.21" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_payment_success.xml" value="0.21" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
@@ -42,10 +41,18 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/mipmap-anydpi-v26/ic_logout.xml" value="0.1835" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/bg_bottomnavigation.xml" value="0.1" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/bg_search1.xml" value="0.201" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/bubblestroke.xml" value="0.2075" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/ic_time1.xml" value="0.1" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_get_started.xml" value="0.22" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.16394927536231885" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_new_profile.xml" value="0.25" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_search.xml" value="0.3011844331641286" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_chat.xml" value="0.2" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_job.xml" value="0.33" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_search.xml" value="0.33" />
+        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/item_homehistory.xml" value="0.5" />
       </map>
     </option>
   </component>

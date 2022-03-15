@@ -10,6 +10,7 @@ import android.util.Log
 import android.util.Patterns
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import com.example.sijobs.databinding.ActivityNewProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -18,7 +19,7 @@ import java.util.*
 
 class NewProfileActivity : AppCompatActivity() {
 
-    private lateinit var binding :ActivityNewProfileBinding
+    lateinit var binding :ActivityNewProfileBinding
 
     // Data user
     private lateinit var name: String
@@ -29,12 +30,19 @@ class NewProfileActivity : AppCompatActivity() {
     private lateinit var firebaseImageProfile: String
 
     // Directory file image profile user
-    private var imageUri: Uri? = null
+    private lateinit var imageUri: Uri
+    private var imageUriAvailabel: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+// TODO: Perbaiki Errornya -> ivBackArrow tidak dikenali!!
+//        binding.ivBackArrow.setOnClickListener{
+//            startActivity(Intent(this, MainActivity::class.java))
+//            finish()
+//        }
 
         // Masukkan data lama ke editText
         loadOldDataUserToEditText()
@@ -72,6 +80,10 @@ class NewProfileActivity : AppCompatActivity() {
 
         var isError = false
 
+        // TODO: Tambahkan fitur dimana jika user tidak mengubah data, maka data sebelumnya akan digunakan lagi
+        // TODO: Agar tidak terlalu banyak terhubung ke firebase bisa mengirimkan data dari fragment profile ke activity change profile
+        // Tapi kalo gambar gimana ngirimnya?
+
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.etEmail.error = "Email format is wrong"
             isError = true
@@ -85,18 +97,23 @@ class NewProfileActivity : AppCompatActivity() {
         val filename = UUID.randomUUID().toString()
         val ref = FirebaseStorage.getInstance().getReference("/images/$filename")
 
-        ref.putFile(imageUri?: Uri.parse(""))
-            .addOnSuccessListener {
-                ref.downloadUrl.addOnSuccessListener {
-                    firebaseImageProfile = it.toString()
-                    updateUserToDatabase()
+        if(imageUriAvailabel){
+            ref.putFile(imageUri)
+                .addOnSuccessListener {
+                    ref.downloadUrl.addOnSuccessListener {
+                        firebaseImageProfile = it.toString()
+                        updateUserToDatabase()
+                    }
                 }
-            }
-            .addOnFailureListener{
-                Log.d("NewProfileActivity", "Gambar gagal di upload sebab: ${it.message}")
-                firebaseImageProfile = ""
-                updateUserToDatabase()
-            }
+                .addOnFailureListener{
+                    Log.d("NewProfileActivity", "Gambar gagal di upload sebab: ${it.message}")
+                    firebaseImageProfile = ""
+                }
+        }
+        else{
+            firebaseImageProfile = ""
+            updateUserToDatabase()
+        }
 
         startActivity(Intent(this, MainActivity::class.java))
     }
@@ -123,6 +140,7 @@ class NewProfileActivity : AppCompatActivity() {
         ActivityResultContracts.GetContent(),
         ActivityResultCallback {
             imageUri = it
+            imageUriAvailabel = true
             binding.profileImage.setImageURI(it)
         }
     )
@@ -139,6 +157,6 @@ class NewProfileActivity : AppCompatActivity() {
             //set to edittext
             binding.etDateofBirth.setText("$mDay/$mMonth/$mYear")
         },year,month, day)
-        dpd.show()
+        dpd.show();
     }
 }
