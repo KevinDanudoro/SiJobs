@@ -18,7 +18,7 @@ import java.util.*
 
 class NewProfileActivity : AppCompatActivity() {
 
-    lateinit var binding :ActivityNewProfileBinding
+    private lateinit var binding :ActivityNewProfileBinding
 
     // Data user
     private lateinit var name: String
@@ -29,13 +29,15 @@ class NewProfileActivity : AppCompatActivity() {
     private lateinit var firebaseImageProfile: String
 
     // Directory file image profile user
-    private lateinit var imageUri: Uri
-    private var imageUriAvailabel: Boolean = false
+    private var imageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Masukkan data lama ke editText
+        loadOldDataUserToEditText()
 
         // Simpan foto pengguna
         binding.addImage.setOnClickListener { getImage.launch("image/*") }
@@ -45,6 +47,18 @@ class NewProfileActivity : AppCompatActivity() {
 
         // Buka input kalender
         binding.etDateofBirth.setOnClickListener { datePicker() }
+    }
+
+    private fun loadOldDataUserToEditText() {
+        name = intent.getStringExtra("NAME").toString()
+        email = intent.getStringExtra("EMAIL").toString()
+        gender = intent.getStringExtra("GENDER").toString()
+        address = intent.getStringExtra("ADDRESS").toString()
+
+        binding.etName.setText(name)
+        binding.etEmail.setText(email)
+        binding.spGender.setSelection(if(gender == "Male") 0 else 1)
+        binding.etAddress.setText(address)
     }
 
     private fun validateUserData() {
@@ -57,10 +71,6 @@ class NewProfileActivity : AppCompatActivity() {
         address = binding.etAddress.text.toString().trim()
 
         var isError = false
-
-        // TODO: Tambahkan fitur dimana jika user tidak mengubah data, maka data sebelumnya akan digunakan lagi
-        // TODO: Agar tidak terlalu banyak terhubung ke firebase bisa mengirimkan data dari fragment profile ke activity change profile
-        // Tapi kalo gambar gimana ngirimnya?
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             binding.etEmail.error = "Email format is wrong"
@@ -75,23 +85,18 @@ class NewProfileActivity : AppCompatActivity() {
         val filename = UUID.randomUUID().toString()
         val ref = FirebaseStorage.getInstance().getReference("/images/$filename")
 
-        if(imageUriAvailabel){
-            ref.putFile(imageUri)
-                .addOnSuccessListener {
-                    ref.downloadUrl.addOnSuccessListener {
-                        firebaseImageProfile = it.toString()
-                        updateUserToDatabase()
-                    }
+        ref.putFile(imageUri?: Uri.parse(""))
+            .addOnSuccessListener {
+                ref.downloadUrl.addOnSuccessListener {
+                    firebaseImageProfile = it.toString()
+                    updateUserToDatabase()
                 }
-                .addOnFailureListener{
-                    Log.d("NewProfileActivity", "Gambar gagal di upload sebab: ${it.message}")
-                    firebaseImageProfile = ""
-                }
-        }
-        else{
-            firebaseImageProfile = ""
-            updateUserToDatabase()
-        }
+            }
+            .addOnFailureListener{
+                Log.d("NewProfileActivity", "Gambar gagal di upload sebab: ${it.message}")
+                firebaseImageProfile = ""
+                updateUserToDatabase()
+            }
 
         startActivity(Intent(this, MainActivity::class.java))
     }
@@ -118,7 +123,6 @@ class NewProfileActivity : AppCompatActivity() {
         ActivityResultContracts.GetContent(),
         ActivityResultCallback {
             imageUri = it
-            imageUriAvailabel = true
             binding.profileImage.setImageURI(it)
         }
     )
@@ -135,6 +139,6 @@ class NewProfileActivity : AppCompatActivity() {
             //set to edittext
             binding.etDateofBirth.setText("$mDay/$mMonth/$mYear")
         },year,month, day)
-        dpd.show();
+        dpd.show()
     }
 }

@@ -15,7 +15,10 @@ class GetStartedActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnStarted.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            Intent(this, LoginActivity::class.java).also {
+                it.putExtra("HAS_SHOW", true)
+                startActivity(it)
+            }
             finish()
         }
     }

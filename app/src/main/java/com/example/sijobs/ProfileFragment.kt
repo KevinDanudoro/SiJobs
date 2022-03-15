@@ -41,7 +41,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
 
         binding.changeProfile.setOnClickListener {
-            startActivity(Intent(this.requireContext(), NewProfileActivity::class.java))
+            Intent(this.requireContext(), NewProfileActivity::class.java).also {
+                it.putExtra("NAME", name)
+                it.putExtra("EMAIL", email)
+                it.putExtra("GENDER", gender)
+                it.putExtra("ADDRESS", address)
+
+                // TODO: Gambar belum bisa di kirim lewat intent. Cari cara!!
+                //it.putExtra("IMAGEURL", imageUrl)
+
+                startActivity(it)
+            }
         }
 
         binding.logout.setOnClickListener {
@@ -79,7 +89,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         binding.tvGender.setText(": $gender")
         binding.tvAddress.setText(": $address")
 
-        // Belom bisa
+        // TODO: Jangan lupa dibuat juga untuk foto agar tampil di profile
+        // binding.profileImage.setImageResource()
+
+        // Belom bisa, harus ngitung usia dari tanggal lahir
         // binding.tvAge.text = age
     }
 

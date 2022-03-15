@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Jika user belum login akan dipindahkan ke halaman login
+//        // Jika user belum login akan dipindahkan ke halaman login
         checkUser()
-
+//
         val homeFragment = HomeFragment()
         val searchFragment = SearchFragment()
         val jobFragment = JobFragment()
@@ -26,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         val profileFragment = ProfileFragment()
 
         // to set homeFragment as main fragment
-        setCurrentFragment(homeFragment)
-
+        setCurrentFragment(profileFragment)
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.miHome -> setCurrentFragment(homeFragment)

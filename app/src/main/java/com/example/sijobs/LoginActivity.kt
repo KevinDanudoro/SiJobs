@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
+import android.window.SplashScreen
 import com.example.sijobs.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -25,11 +26,12 @@ class LoginActivity : AppCompatActivity() {
 
         // inisialisasi auth firebase
         firebaseAuth = FirebaseAuth.getInstance()
-        checkUser()
+
+        val hasShow = intent.getBooleanExtra("HAS_SHOW", false)
+        checkUser(hasShow)
 
         // Authentikasi email dan password
         binding.button.setOnClickListener {
-
             validasiData()
         }
 
@@ -39,10 +41,13 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun checkUser() {
+    private fun checkUser(hasShow: Boolean) {
         val firebaseUser = firebaseAuth.currentUser
         if(firebaseUser != null){
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }else if(!hasShow){
+            startActivity(Intent(this, GetStartedActivity::class.java))
             finish()
         }
     }
@@ -88,3 +93,4 @@ class LoginActivity : AppCompatActivity() {
     }
 
 }
+
