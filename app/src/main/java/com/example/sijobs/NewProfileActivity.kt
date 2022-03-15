@@ -10,6 +10,7 @@ import android.util.Log
 import android.util.Patterns
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.Fragment
 import com.example.sijobs.databinding.ActivityNewProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -36,6 +37,11 @@ class NewProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.ivBackArrow.setOnClickListener{
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
         // Simpan foto pengguna
         binding.addImage.setOnClickListener { getImage.launch("image/*") }
