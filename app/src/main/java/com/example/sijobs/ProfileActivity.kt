@@ -21,9 +21,9 @@ class ProfileActivity : AppCompatActivity() {
         // Pindah ke halaman Change Profile
         binding.changeProfile.setOnClickListener { toChangeProfile() }
 
-
         // Cek user masih login apa sudah logout
         checkUser()
+
         // Jika user logout maka
         binding.logout.setOnClickListener { userLogout() }
     }

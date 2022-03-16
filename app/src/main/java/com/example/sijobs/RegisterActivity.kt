@@ -30,6 +30,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var dateOfBirth: String
     private lateinit var gender: String
     private lateinit var address: String
+    private lateinit var age: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,7 +102,7 @@ class RegisterActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 // Jika register berhasil
                 val email = FirebaseAuth.getInstance().currentUser!!.email
-                Toast.makeText(this, "Berhasil registrasi menggunakan email $email", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Login success with email $email", Toast.LENGTH_LONG).show()
                 saveUserToDatabase()
 
                 startActivity(Intent(this, MainActivity::class.java))
@@ -109,7 +110,7 @@ class RegisterActivity : AppCompatActivity() {
             }
             .addOnFailureListener{
                 // Jika register gagal
-                Toast.makeText(this, "Gagal melakukan registrasi sebab ${it.message}", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Failed to register because ${it.message}", Toast.LENGTH_LONG).show()
             }
     }
 
@@ -117,7 +118,7 @@ class RegisterActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/users/$uid")
 
-        val user = UserData(uid, email, username, dateOfBirth, gender, address, "")
+        val user = UserData(uid, email, username, username, dateOfBirth, gender, address, "null")
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d("Register", "Data $username berhasil disimpan")
@@ -138,8 +139,18 @@ class RegisterActivity : AppCompatActivity() {
 
         val dpd = DatePickerDialog(this, { datePicker, mYear, mMonth, mDay ->
             //set to edittext
-            binding.birthInput.setText("$mDay/$mMonth/$mYear")
-        },year,month, day)
+            var stringDay = mDay.toString();
+            var stringMonth = (mMonth+1).toString();
+            var stringYear = mYear.toString();
+
+            if(mDay < 10) stringDay = "0$stringDay"
+            if(mMonth < 10) stringMonth = "0$stringMonth"
+
+            dateOfBirth = "$stringDay/$stringMonth/$stringYear"
+            binding.birthInput.setText(dateOfBirth)
+
+        },year, month, day)
+
         dpd.show()
     }
 

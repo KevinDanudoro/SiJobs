@@ -63,4 +63,7 @@ dependencies {
 
     //Bottom Navigation View
     implementation 'com.google.android.material:material:1.5.0'
+
+    // Tampilkan image dari URL
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
