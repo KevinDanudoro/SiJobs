@@ -67,9 +67,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             it.putExtra("IMAGEURL", imageUrl)
             it.putExtra("DATEOFBIRTH", dateOfBirth)
 
-            // TODO: Gambar belum bisa di kirim lewat intent. Cari cara!!
-            // it.putExtra("IMAGEURL", imageUrl)
-
             startActivity(it)
         }
     }
