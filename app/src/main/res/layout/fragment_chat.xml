@@ -191,7 +191,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:fontFamily="@font/roboto"
-            android:text="Abdul Ghaffar"
+            android:text="Lewis Hamilton"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/iv_chatAbdul"
