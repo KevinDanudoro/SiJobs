@@ -55,6 +55,7 @@ class NewProfileActivity : AppCompatActivity() {
 
         // Buka input kalender
         binding.etDateofBirth.setOnClickListener { datePicker() }
+
     }
 
     private fun loadOldDataUserToEditText() {
