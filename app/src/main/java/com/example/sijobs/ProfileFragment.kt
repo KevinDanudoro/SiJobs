@@ -19,6 +19,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var firebaseDatabase: FirebaseDatabase
+
     private lateinit var username: String
     private lateinit var name: String
     private lateinit var email: String
@@ -27,6 +30,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var address: String
     private lateinit var imageUrl: String
     private lateinit var dateOfBirth: String
+    private lateinit var jobsList: List<String>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,10 +44,22 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        readData();
+        firebaseAuth = FirebaseAuth.getInstance()
+        firebaseDatabase = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        val uid = firebaseAuth.uid ?: ""
+
+        readUsersData(uid);
+
+        readJobsData(uid)
 
         binding.changeProfile.setOnClickListener {
             sendDataToNewProfile()
+        }
+
+        binding.changeSkill.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_Fragmment, AddSkillFragment())
+            transaction.commit()
         }
 
         binding.logout.setOnClickListener {
@@ -71,9 +87,8 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         }
     }
 
-    private fun readData() {
-        val uid = FirebaseAuth.getInstance().uid ?: ""
-        val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/users/$uid")
+    private fun readUsersData(uid: String) {
+        val ref = firebaseDatabase.getReference("/users/$uid")
         ref.get()
             .addOnSuccessListener {
                 username = it.child("username").value.toString()
@@ -100,6 +115,22 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             }
     }
 
+    private fun readJobsData(uid: String) {
+        val jobRef = firebaseDatabase.getReference("/jobs/$uid")
+        val jobs = mutableListOf<String>()
+        jobRef.get()
+            .addOnSuccessListener {
+                it.children.forEach { job ->
+                    if(job.value.toString() != it.child("uid").value.toString()){
+                        jobs.add(job.value.toString())
+                    }
+                }
+                // Pengiriman data berhasil
+                jobsList = jobs
+                Log.d("listjobs", jobsList.toString())
+            }
+    }
+
     private fun bindingDataFromDatabase() {
         // username masih merupakan userusername
         binding.profileName.text = username
@@ -112,7 +143,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     }
 
     private fun userLogout() {
-        FirebaseAuth.getInstance().signOut()
+        firebaseAuth.signOut()
         startActivity(Intent(this.requireContext(), LoginActivity::class.java))
         activity?.finish()
     }

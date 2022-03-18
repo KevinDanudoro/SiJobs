@@ -20,9 +20,12 @@ class RegisterActivity : AppCompatActivity() {
     // Binding
     private lateinit var binding: ActivityRegisterBinding
 
-    // Data user
+    // Data authentikasi
     private lateinit var email: String
     private lateinit var password: String
+
+    // Firebaseauth
+    private lateinit var firebaseauth: FirebaseAuth
 
     // Apa username perlu diinputkan pada app freelancer?
     // Mending first name aja ga sih?
@@ -37,6 +40,8 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        firebaseauth = FirebaseAuth.getInstance()
 
         // Interaksi tombol register
         binding.button.setOnClickListener {
@@ -98,10 +103,10 @@ class RegisterActivity : AppCompatActivity() {
 
     // Membuat akun di firebase berdasarkan input email dan password yang dimasukkan
     private fun firebaseRegister() {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+        firebaseauth.createUserWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 // Jika register berhasil
-                val email = FirebaseAuth.getInstance().currentUser!!.email
+                val email = firebaseauth.currentUser!!.email
                 Toast.makeText(this, "Login success with email $email", Toast.LENGTH_LONG).show()
                 saveUserToDatabase()
 
@@ -115,7 +120,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun saveUserToDatabase() {
-        val uid = FirebaseAuth.getInstance().currentUser!!.uid
+        val uid = firebaseauth.currentUser!!.uid
         val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/users/$uid")
 
         val user = UserData(uid, email, username, username, dateOfBirth, gender, address, "null")

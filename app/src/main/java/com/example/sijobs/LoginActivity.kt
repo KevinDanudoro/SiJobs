@@ -59,11 +59,11 @@ class LoginActivity : AppCompatActivity() {
         var isError = false
 
         if(TextUtils.isEmpty(email)){
-            binding.emailInput.error = "Mohon masukkan email"
+            binding.emailInput.error = "Please enter your email"
             isError = true
         }
         if(TextUtils.isEmpty(password)){
-            binding.passInput.error = "Mohon masukkan password"
+            binding.passInput.error = "Please enter your password"
             isError = true
         }
         if(!isError){
@@ -75,13 +75,13 @@ class LoginActivity : AppCompatActivity() {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener {
                 // Login Berhasil
-                Toast.makeText(this, "Login berhasil sebagai $email", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Login success with email $email", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }
             .addOnFailureListener{
                 // Login Gagal
-                Toast.makeText(this, "Email atau Password salah", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Email or password wrong", Toast.LENGTH_LONG).show()
             }
     }
 

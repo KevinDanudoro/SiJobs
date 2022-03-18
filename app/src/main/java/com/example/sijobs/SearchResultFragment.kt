@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.sijobs.databinding.FragmentProfileBinding
 import com.example.sijobs.databinding.FragmentSearchBinding
 import com.example.sijobs.databinding.FragmentSearchResultBinding
+import com.google.firebase.database.FirebaseDatabase
 import java.security.acl.Group
 
 class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
@@ -28,6 +29,9 @@ class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // mengambil data pada database
+        val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/jobs/").get()
 
         var jobs = mutableListOf(
             Search("Koki"),
