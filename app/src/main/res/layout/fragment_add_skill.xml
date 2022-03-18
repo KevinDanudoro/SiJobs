@@ -7,6 +7,16 @@
     android:background="@color/secondary_white"
     tools:context=".AddSkillFragment">
 
+    <ImageView
+        android:id="@+id/iv_backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/text_add_skill"
+        app:layout_constraintEnd_toStartOf="@+id/text_add_skill"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
     <TextView
         android:id="@+id/text_add_skill"
         android:layout_width="wrap_content"
@@ -317,8 +327,8 @@
         android:background="@drawable/selector_shape_skill"
         android:fontFamily="@font/inter_bold"
         android:text="Add more skills"
+        android:textColor="@color/black"
         android:textAllCaps="false"
-        android:textColor="#FEBD2F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/save_btn"
         app:layout_constraintHorizontal_bias="0.0"
@@ -330,13 +340,13 @@
         android:id="@+id/save_btn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/shape_login_btn"
-        android:fontFamily="@font/inter_bold"
         android:paddingHorizontal="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_yellow"
+        android:fontFamily="@font/inter_bold"
         android:text="Save"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />

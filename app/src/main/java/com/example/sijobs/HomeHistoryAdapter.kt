@@ -2,10 +2,13 @@ package com.example.sijobs
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sijobs.databinding.ItemHomehistoryBinding
 
-class HomeHistoryAdapter(var histories: List<HomeHistory>): RecyclerView.Adapter<HomeHistoryAdapter.HistoryViewHolder>()  {
+class HomeHistoryAdapter(
+    var histories: List<HomeHistory>
+) : RecyclerView.Adapter<HomeHistoryAdapter.HistoryViewHolder>()  {
 
     inner class HistoryViewHolder(val binding: ItemHomehistoryBinding) : RecyclerView.ViewHolder(binding.root)
 
