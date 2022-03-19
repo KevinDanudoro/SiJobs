@@ -38,5 +38,45 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="si_jobs">SI JOBS</string>
+    <string name="tagline1">It\'s not just a Job</string>
+    <string name="get_started">Get Started</string>
+    <string name="ainsley_lisa">Ainsley Lisa</string>
+    <string name="lorem_chat">Lorem ipsum dolor sit amet, consectetur...</string>
+    <string name="aether">Aether</string>
+    <string name="lewis_hamilton">Lewis Hamilton</string>
+    <string name="emmanuelle_proulx">Emmanuelle Proulx</string>
+    <string name="_10_mins_ago">10 mins ago</string>
+    <string name="_2_days_ago">2 days ago</string>
+    <string name="a_week_ago">a week ago</string>
+    <string name="a_month_ago">a month ago</string>
+    <string name="search">Search</string>
+    <string name="conversation">Conversation</string>
+    <string name="let_s_discover_your">Let\'s discover your</string>
+    <string name="part_job">part job</string>
+    <string name="content_creator">Content Creator</string>
+    <string name="admin">Admin</string>
+    <string name="podcaster">Podcaster</string>
+    <string name="kurir">Kurir</string>
+    <string name="cashier">Cashier</string>
+    <string name="baby_sitter">Baby Sitter</string>
+    <string name="history">History</string>
+    <string name="view_all">View all</string>
+    <string name="done">(Done)</string>
+    <string name="designer">Designer</string>
+    <string name="_17_februari_2022">17 Februari 2022</string>
+    <string name="give_review">Give Review</string>
+    <string name="_15_februari_2022">15 Februari 2022</string>
+    <string name="your_job">Your Job</string>
+    <string name="job_tasks">Job Tasks</string>
+    <string name="done1">Done</string>
+    <string name="lorem_job">Lorem ipsum dolor sit amet, consectetur adipiscing...</string>
+    <string name="more">More</string>
+    <string name="influencer">Influencer</string>
+    <string name="home">Home</string>
+    <string name="job">Job</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="experience">Experience</string>
 
 </resources>
