@@ -33,8 +33,9 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_new_profile.xml" value="0.22" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_search.xml" value="0.18" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_splash_screen.xml" value="0.142368533561351" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_add_skill.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_change_profile.xml" value="0.21" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_chat.xml" value="0.21" />
@@ -45,7 +46,7 @@
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_search.xml" value="0.33" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_search_result.xml" value="0.14097914777878512" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/search_result.xml" value="0.142368533561351" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/layout/search_result.xml" value="0.25" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/menu/menu_btm_nav.xml" value="0.142368533561351" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1835" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/SiJobs/app/src/main/res/mipmap-anydpi-v26/ic_logout.xml" value="0.1835" />
@@ -59,7 +60,6 @@
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_line.xml" value="0.2" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_linesearch.xml" value="0.174" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/drawable/shape_login_btn.xml" value="0.1625" />
-        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/font/roboto_medium_italic.xml" value="0.23020833333333332" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_get_started.xml" value="0.22" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_main.xml" value="0.1859375" />
@@ -67,7 +67,6 @@
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_register.xml" value="0.16304347826086957" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_search.xml" value="0.3011844331641286" />
-        <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_add_skill.xml" value="0.33" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_chat.xml" value="0.25" />
         <entry key="..\:/Users/dzikryaji/AndroidStudioProjects/SiJobs/app/src/main/res/layout/fragment_home.xml" value="0.22" />
