@@ -112,7 +112,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\dzikryaji\Downloads\LOGO SIJOBS 1.png" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\Downloads\Group 427319031.png" />
                                                 <entry key="scalingPercent" value="72" />
                                               </map>
                                             </option>
@@ -146,8 +146,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="141218" />
-                                      <entry key="outputName" value="ic_logo" />
+                                      <entry key="backgroundColor" value="242424" />
+                                      <entry key="outputName" value="ic_logosijobs" />
                                     </map>
                                   </option>
                                 </PersistentState>
