@@ -120,11 +120,12 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_yellow"
-                    android:text="@string/more"
                     android:fontFamily="@font/roboto_bold"
+                    android:text="@string/more"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -179,11 +180,12 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_yellow"
-                    android:text="@string/more"
                     android:fontFamily="@font/roboto_bold"
+                    android:text="@string/more"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -238,11 +240,12 @@
                     android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/bg_yellow"
-                    android:text="@string/more"
                     android:fontFamily="@font/roboto_bold"
+                    android:text="@string/more"
                     android:textAllCaps="false"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="TouchTargetSizeCheck" />
                 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
