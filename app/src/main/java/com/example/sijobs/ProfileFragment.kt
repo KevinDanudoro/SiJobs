@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.squareup.picasso.Picasso
 import java.util.*
+import kotlin.reflect.KVariance
 
 class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
@@ -22,7 +23,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseDatabase: FirebaseDatabase
 
-    private lateinit var username: String
     private lateinit var name: String
     private lateinit var email: String
     private lateinit var age: String
@@ -30,7 +30,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private lateinit var address: String
     private lateinit var imageUrl: String
     private lateinit var dateOfBirth: String
-    private lateinit var jobsList: List<String>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -91,7 +90,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         val ref = firebaseDatabase.getReference("/users/$uid")
         ref.get()
             .addOnSuccessListener {
-                username = it.child("username").value.toString()
                 name = it.child("name").value.toString()
                 email = it.child("email").value.toString()
                 gender = it.child("gender").value.toString()
@@ -103,7 +101,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
                 val calendar = Calendar.getInstance()
                 val yearNow = calendar.get(Calendar.YEAR)
-                val monthNow = calendar.get(Calendar.MONTH)
+                val monthNow = calendar.get(Calendar.MONTH) + 1
                 val dayNow = calendar.get(Calendar.DAY_OF_MONTH)
 
                 var preAge = (yearNow - Birth[2].toInt()) - 1
@@ -113,6 +111,17 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
 
                 bindingDataFromDatabase()
             }
+    }
+
+    private fun bindingDataFromDatabase() {
+        // username masih merupakan userusername
+        binding.profileName.text = name
+        binding.tvName.text = ": $name"
+        binding.tvEmail.text = ": $email"
+        binding.tvGender.text = ": $gender"
+        binding.tvAddress.text = ": $address"
+        binding.tvAge.text = ": $age"
+        if(imageUrl != "null") Picasso.get().load(imageUrl).into(binding.profileImage)
     }
 
     private fun readJobsData(uid: String) {
@@ -126,20 +135,20 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
                     }
                 }
                 // Pengiriman data berhasil
-                jobsList = jobs
-                Log.d("listjobs", jobsList.toString())
+                Log.d("listjobs", jobs.toString())
+
+                bindingJobsDataFromDatabases(jobs)
             }
     }
 
-    private fun bindingDataFromDatabase() {
-        // username masih merupakan userusername
-        binding.profileName.text = username
-        binding.tvName.text = ": $name"
-        binding.tvEmail.text = ": $email"
-        binding.tvGender.text = ": $gender"
-        binding.tvAddress.text = ": $address"
-        binding.tvAge.text = ": $age"
-        if(imageUrl != "null") Picasso.get().load(imageUrl).into(binding.profileImage)
+    private fun bindingJobsDataFromDatabases(jobs: List<String>) {
+        val tvSkills = arrayOf(binding.skill1, binding.skill2, binding.skill3, binding.skill4)
+
+        for (i in jobs.indices){
+            tvSkills[i].text = jobs[i]
+            tvSkills[i].visibility = View.VISIBLE
+
+        }
     }
 
     private fun userLogout() {

@@ -87,8 +87,8 @@
                 android:text="Rp 1Jt"
                 android:textColor="@color/primary_yellow"
                 android:textSize="15sp"
-                app:layout_constraintBottom_toTopOf="@+id/button2"
-                app:layout_constraintStart_toStartOf="@+id/button2"
+                app:layout_constraintBottom_toTopOf="@+id/btn_order"
+                app:layout_constraintStart_toStartOf="@+id/btn_order"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
             <TextView
@@ -103,7 +103,7 @@
                 app:layout_constraintTop_toTopOf="@+id/textView11" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_order"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginEnd="15dp"
