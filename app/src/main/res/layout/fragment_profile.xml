@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_gray">
+    android:background="@color/primary_gray"
+    tools:context=".ProfileFragment">
 
 
     <!--      app:layout_constraintDimensionRatio="2:1"-->
@@ -115,7 +116,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/inter_bold"
-            android:text="Name"
+            android:text="@string/name"
             android:textColor="@color/primary_gray"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_bold"
-            android:text="Email"
+            android:text="@string/email"
             android:textColor="@color/primary_gray"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintStart_toStartOf="@+id/textView"
@@ -150,7 +151,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_bold"
-            android:text="Gender"
+            android:text="@string/gender"
             android:textColor="@color/primary_gray"
             app:layout_constraintBottom_toTopOf="@+id/textView7"
             app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -161,7 +162,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_bold"
-            android:text="Address"
+            android:text="@string/address"
             android:textColor="@color/primary_gray"
             app:layout_constraintBottom_toTopOf="@+id/guideline10"
             app:layout_constraintStart_toStartOf="@+id/textView6"

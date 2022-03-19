@@ -24,7 +24,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Asus\AppData\Local\Temp\baseline_person_24.xml" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\AppData\Local\Temp\baseline_person_24.xml" />
                                                 <entry key="opacityPercent" value="60" />
                                               </map>
                                             </option>
@@ -100,7 +100,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Asus\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -112,6 +112,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\Downloads\LOGO SIJOBS 1.png" />
+                                                <entry key="scalingPercent" value="72" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -141,6 +143,13 @@
                                       </entry>
                                     </map>
                                   </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="backgroundAssetType" value="COLOR" />
+                                      <entry key="backgroundColor" value="141218" />
+                                      <entry key="outputName" value="ic_logo" />
+                                    </map>
+                                  </option>
                                 </PersistentState>
                               </value>
                             </entry>
@@ -155,7 +164,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="919191" />
-                                                <entry key="imagePath" value="C:\Users\Asus\AppData\Local\Temp\baseline_exit_to_app_24.xml" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\AppData\Local\Temp\baseline_exit_to_app_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -228,7 +237,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\Asus\AppData\Local\Temp\baseline_exit_to_app_24.xml" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\AppData\Local\Temp\baseline_exit_to_app_24.xml" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -318,7 +327,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="imagePath" value="C:\Users\Asus\AppData\Local\Temp\ic_android_black_24dp.xml" />
+                                                <entry key="imagePath" value="C:\Users\dzikryaji\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -362,11 +371,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>

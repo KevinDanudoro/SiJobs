@@ -20,6 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/iv_bar"
         android:layout_width="0dp"
         android:layout_height="3dp"
         android:layout_marginTop="5dp"
@@ -48,7 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:text="Done"
-
         android:textColor="@color/black"
         android:fontFamily="@font/roboto"
         android:textSize="15sp"
@@ -56,184 +56,314 @@
         app:layout_constraintStart_toEndOf="@+id/tv_jobTasks"
         app:layout_constraintTop_toTopOf="@+id/tv_jobTasks" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cv_babySitter"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:background="@drawable/shape_profile_box"
-        android:translationZ="7dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_jobTasks">
+        app:layout_constraintTop_toBottomOf="@+id/iv_bar">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
-        <ImageView
-            android:id="@+id/iv_babySitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/im_babysitter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_babySitter"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:background="@drawable/shape_profile_box"
+                android:translationZ="7dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_babySitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Baby Sitter"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/iv_babySitter"
-            app:layout_constraintTop_toTopOf="@+id/iv_babySitter" />
+                <ImageView
+                    android:id="@+id/iv_babySitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/im_babysitter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
-            android:textColor="#696974"
-            app:layout_constraintStart_toStartOf="@+id/tv_babySitter"
-            app:layout_constraintTop_toBottomOf="@+id/tv_babySitter"
-            app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:id="@+id/tv_babySitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Baby Sitter"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_babySitter"
+                    app:layout_constraintTop_toTopOf="@+id/iv_babySitter" />
 
-        <Button
-            android:layout_width="65dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_yellow"
-            android:text="More"
-            android:fontFamily="@font/roboto_bold"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+                    android:textColor="#696974"
+                    app:layout_constraintStart_toStartOf="@+id/tv_babySitter"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_babySitter"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cv_influencer"
-        android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:background="@drawable/shape_profile_box"
-        android:translationZ="7dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cv_babySitter">
-
-        <ImageView
-            android:id="@+id/iv_influencer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/im_influencer"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_influencer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Influencer"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/iv_influencer"
-            app:layout_constraintTop_toTopOf="@+id/iv_influencer" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
-            android:textColor="#696974"
-            app:layout_constraintStart_toStartOf="@+id/tv_influencer"
-            app:layout_constraintTop_toBottomOf="@+id/tv_influencer"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <Button
-            android:layout_width="65dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_yellow"
-            android:text="More"
-            android:fontFamily="@font/roboto_bold"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_yellow"
+                    android:text="More"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cv_u"
-        android:layout_width="0dp"
-        android:layout_height="125dp"
-        android:background="@drawable/shape_profile_box"
-        android:translationZ="7dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_influencer">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_influencer"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:background="@drawable/shape_profile_box"
+                android:translationZ="7dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_babySitter">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:src="@drawable/im_babysitter"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@+id/iv_influencer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/im_influencer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/roboto_bold"
-            android:text="Baby Sitter"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                <TextView
+                    android:id="@+id/tv_influencer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Influencer"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_influencer"
+                    app:layout_constraintTop_toTopOf="@+id/iv_influencer" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
-            android:textColor="#696974"
-            app:layout_constraintStart_toStartOf="@+id/textView9"
-            app:layout_constraintTop_toBottomOf="@+id/textView9"
-            app:layout_constraintEnd_toEndOf="parent"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+                    android:textColor="#696974"
+                    app:layout_constraintStart_toStartOf="@+id/tv_influencer"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_influencer"
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
-        <Button
-            android:layout_width="65dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_yellow"
-            android:text="More"
-            android:fontFamily="@font/roboto_bold"
-            android:textAllCaps="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_yellow"
+                    android:text="More"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_babysitter1"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:background="@drawable/shape_profile_box"
+                android:translationZ="7dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_influencer">
 
+                <ImageView
+                    android:id="@+id/iv_babysitter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/im_babysitter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_babysitter1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Baby Sitter"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_babysitter1"
+                    app:layout_constraintTop_toTopOf="@+id/iv_babysitter1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+                    android:textColor="#696974"
+                    app:layout_constraintStart_toStartOf="@+id/tv_babysitter1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_babysitter1"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_yellow"
+                    android:text="More"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+                
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_influencer1"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:background="@drawable/shape_profile_box"
+                android:translationZ="7dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_babysitter1">
+
+                <ImageView
+                    android:id="@+id/iv_influencer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/im_influencer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_influencer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Influencer"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_influencer1"
+                    app:layout_constraintTop_toTopOf="@+id/iv_influencer1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+                    android:textColor="#696974"
+                    app:layout_constraintStart_toStartOf="@+id/tv_influencer1"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_influencer1"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_yellow"
+                    android:text="More"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_u"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:background="@drawable/shape_profile_box"
+                android:translationZ="7dp"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_influencer1">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/im_babysitter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Baby Sitter"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing..."
+                    android:textColor="#696974"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <Button
+                    android:layout_width="65dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_yellow"
+                    android:text="More"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textAllCaps="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+    </ScrollView>
+    
 </androidx.constraintlayout.widget.ConstraintLayout>

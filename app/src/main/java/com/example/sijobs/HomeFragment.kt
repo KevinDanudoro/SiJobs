@@ -31,19 +31,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        firebaseDatabase = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/")
-        firebaseAuth = FirebaseAuth.getInstance()
-
-        loadUserDataFromDatabase()
-
-        var history = mutableListOf(
-            HomeHistory("Ainsley Lisa", "Designer", "17 Februari 2022"),
-            HomeHistory("Aether", "Kurir", "15 Februari 2022"),
-            HomeHistory("Emmanulle Proulx", "Designer", "14 Februari 2022"),
-        )
-
-        val adapter = HomeHistoryAdapter(history)
-        binding.rvHistory.adapter = adapter
     }
 
     private fun loadUserDataFromDatabase() {
