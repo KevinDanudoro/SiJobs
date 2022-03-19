@@ -117,20 +117,21 @@
 
     <Button
         android:id="@+id/btn_started"
-        android:paddingEnd="15dp"
         android:layout_width="170dp"
         android:layout_height="45dp"
         android:background="@drawable/bg_yellow"
-        android:text="@string/get_started"
+        android:drawableEnd="@drawable/frame"
         android:fontFamily="@font/montserrat_alternates_bold"
+        android:paddingEnd="15dp"
+        android:text="@string/get_started"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:drawableEnd="@drawable/frame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tagline1"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_tagline1"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 

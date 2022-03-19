@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="Add Your Skill"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/add_your_skill"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -51,7 +51,8 @@
                 android:layout_height="35dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/shape_login_btn"
-                android:text="All"
+                android:text="@string/all"
+                android:fontFamily="@font/roboto_medium"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
@@ -61,7 +62,8 @@
                 android:layout_height="35dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/selector_shape_skill"
-                android:text="Asisten"
+                android:text="@string/asisten"
+                android:fontFamily="@font/roboto_medium"
                 android:textAllCaps="false"
                 android:textColor="@color/skill_text_color"
                 android:textSize="15sp" />
@@ -71,7 +73,8 @@
                 android:layout_height="35dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/selector_shape_skill"
-                android:text="Kesenian"
+                android:text="@string/kesenian"
+                android:fontFamily="@font/roboto_medium"
                 android:textAllCaps="false"
                 android:textColor="@color/skill_text_color"
                 android:textSize="15sp" />
@@ -81,7 +84,8 @@
                 android:layout_height="35dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/selector_shape_skill"
-                android:text="Pendidikan"
+                android:text="@string/pendidikan"
+                android:fontFamily="@font/roboto_medium"
                 android:textAllCaps="false"
                 android:textColor="@color/skill_text_color"
                 android:textSize="15sp" />
@@ -91,7 +95,8 @@
                 android:layout_height="35dp"
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/selector_shape_skill"
-                android:text="All"
+                android:text="@string/all"
+                android:fontFamily="@font/roboto_medium"
                 android:textAllCaps="false"
                 android:textColor="@color/skill_text_color"
                 android:textSize="15sp" />
@@ -107,12 +112,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Pengisi kuisioner"
+        android:text="@string/pengisi_kuisioner"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item7"
-        app:layout_constraintStart_toEndOf="@+id/item7" />
+        app:layout_constraintStart_toEndOf="@+id/item7"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item6"
@@ -121,12 +128,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Asisten rumah tangga"
+        android:text="@string/asisten_rumah_tangga"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item5"
-        app:layout_constraintStart_toEndOf="@+id/item5" />
+        app:layout_constraintStart_toEndOf="@+id/item5"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item2"
@@ -135,12 +144,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Pengasuh anak"
+        android:text="@string/pengasuh_anak"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item1"
-        app:layout_constraintStart_toEndOf="@+id/item1" />
+        app:layout_constraintStart_toEndOf="@+id/item1"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item4"
@@ -148,13 +159,15 @@
         android:layout_height="35dp"
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
-        android:textColor="@color/skill_text_color"
         android:paddingHorizontal="20dp"
-        android:text="Tukang pijit"
+        android:text="@string/tukang_pijit"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
+        android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item3"
-        app:layout_constraintStart_toEndOf="@+id/item3" />
+        app:layout_constraintStart_toEndOf="@+id/item3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item10"
@@ -163,12 +176,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Reparasi furniture"
+        android:text="@string/reparasi_furniture"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item9"
-        app:layout_constraintStart_toEndOf="@+id/item9" />
+        app:layout_constraintStart_toEndOf="@+id/item9"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item12"
@@ -177,12 +192,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Tukang jahit"
+        android:text="@string/tukang_jahit"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item11"
-        app:layout_constraintStart_toEndOf="@+id/item11" />
+        app:layout_constraintStart_toEndOf="@+id/item11"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item14"
@@ -191,12 +208,14 @@
         android:layout_marginStart="15dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Cuci mobil"
+        android:text="@string/cuci_mobil"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/item13"
-        app:layout_constraintStart_toEndOf="@+id/item13" />
+        app:layout_constraintStart_toEndOf="@+id/item13"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item13"
@@ -204,13 +223,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Penebang pohon"
+        android:text="@string/penebang_pohon"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="@+id/item11"
-        app:layout_constraintTop_toBottomOf="@+id/item11" />
+        app:layout_constraintTop_toBottomOf="@+id/item11"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item1"
@@ -219,14 +240,16 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Driver"
+        android:text="@string/driver"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item3"
         app:layout_constraintStart_toStartOf="@+id/text_add_skill"
         app:layout_constraintTop_toBottomOf="@+id/scroll_view"
-        app:layout_constraintVertical_chainStyle="spread" />
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item3"
@@ -234,13 +257,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Service elektronik"
+        android:text="@string/service_elektronik"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item5"
         app:layout_constraintStart_toStartOf="@+id/item1"
-        app:layout_constraintTop_toBottomOf="@+id/item1" />
+        app:layout_constraintTop_toBottomOf="@+id/item1"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item5"
@@ -248,13 +273,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Hairstylish"
+        android:text="@string/hairstylish"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item7"
         app:layout_constraintStart_toStartOf="@+id/item3"
-        app:layout_constraintTop_toBottomOf="@+id/item3" />
+        app:layout_constraintTop_toBottomOf="@+id/item3"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item7"
@@ -262,13 +289,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Guru privat"
+        android:text="@string/guru_privat"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item9"
         app:layout_constraintStart_toStartOf="@+id/item5"
-        app:layout_constraintTop_toBottomOf="@+id/item5" />
+        app:layout_constraintTop_toBottomOf="@+id/item5"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item9"
@@ -276,13 +305,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Bersih-bersih"
+        android:text="@string/bersih_bersih"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item11"
         app:layout_constraintStart_toStartOf="@+id/item7"
-        app:layout_constraintTop_toBottomOf="@+id/item7" />
+        app:layout_constraintTop_toBottomOf="@+id/item7"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/item11"
@@ -290,13 +321,15 @@
         android:layout_height="35dp"
         android:background="@drawable/selector_shape_skill"
         android:paddingHorizontal="20dp"
-        android:text="Service kendaraan"
+        android:text="@string/service_kendaraan"
+        android:fontFamily="@font/roboto"
         android:textAllCaps="false"
         android:textColor="@color/skill_text_color"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/item13"
         app:layout_constraintStart_toStartOf="@+id/item9"
-        app:layout_constraintTop_toBottomOf="@+id/item9" />
+        app:layout_constraintTop_toBottomOf="@+id/item9"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
@@ -311,8 +344,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/inter_bold"
-        android:text="You just can add three skills for free, if you want to add  more, you will get some payment"
+        android:fontFamily="@font/roboto_medium_italic"
+        android:text="@string/pay_to_add"
         android:textColor="@color/black"
         android:textSize="13sp"
         app:layout_constraintTop_toTopOf="@+id/guideline8"
@@ -325,30 +358,32 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="85dp"
         android:background="@drawable/selector_shape_skill"
-        android:fontFamily="@font/inter_bold"
-        android:text="Add more skills"
-        android:textColor="@color/black"
+        android:fontFamily="@font/roboto"
+        android:text="@string/add_more_skills"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/save_btn"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/save_btn"
         app:layout_constraintTop_toBottomOf="@+id/save_btn"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.219"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/save_btn"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:paddingHorizontal="60dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_yellow"
-        android:fontFamily="@font/inter_bold"
-        android:text="Save"
+        android:fontFamily="@font/roboto"
+        android:paddingHorizontal="60dp"
+        android:text="@string/save"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:ignore="TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
