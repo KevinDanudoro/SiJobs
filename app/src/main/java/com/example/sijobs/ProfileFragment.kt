@@ -52,7 +52,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         readJobsData(uid)
 
         binding.changeProfile.setOnClickListener {
-            sendDataToNewProfile()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fl_Fragmment, ChangeProfileFragment())
+            transaction.commit()
         }
 
         binding.changeSkill.setOnClickListener {
@@ -70,20 +72,6 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
-    }
-
-
-    private fun sendDataToNewProfile() {
-        Intent(this.requireContext(), NewProfileActivity::class.java).also {
-            it.putExtra("NAME", name)
-            it.putExtra("EMAIL", email)
-            it.putExtra("GENDER", gender)
-            it.putExtra("ADDRESS", address)
-            it.putExtra("IMAGEURL", imageUrl)
-            it.putExtra("DATEOFBIRTH", dateOfBirth)
-
-            startActivity(it)
-        }
     }
 
     private fun readUsersData(uid: String) {

@@ -1,6 +1,8 @@
 package com.example.sijobs
 
 import android.os.Bundle
+import android.provider.Settings
+import android.util.Log
 import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,19 +36,21 @@ class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
         firebaseDatabase = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/")
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.etSearch.bringToFront()
+        bindingJobsDataFromDatabase("")
+
         binding.etSearch.setOnKeyListener(View.OnKeyListener{view, keycode, event ->
             if(keycode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP){
+                bindingJobsDataFromDatabase(binding.etSearch.text.toString())
                 return@OnKeyListener true
             }
             false
         })
-
-        bindingJobsDataFromDatabase()
     }
 
-    private fun bindingJobsDataFromDatabase() {
-
+    private fun bindingJobsDataFromDatabase(input: String) {
         var rvJobs = mutableListOf<Search>()
+        val pattern = Regex(input.lowercase())
 
         val ref = firebaseDatabase.getReference("/jobs")
         ref.get()
@@ -54,7 +58,7 @@ class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
                 allUsersJob.children.forEach { usersJob ->
                     if (usersJob.child("uid").value.toString() != firebaseAuth.currentUser!!.uid){
                         usersJob.children.forEach {
-                            if (it.value.toString() != usersJob.child("uid").value.toString())
+                            if (it.value.toString() != usersJob.child("uid").value.toString() && pattern.containsMatchIn(it.value.toString().lowercase()))
                                 rvJobs.add(Search(it.value.toString()))
                         }
                     }
@@ -62,7 +66,6 @@ class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
 
                 val adapter = SearchAdapter(rvJobs)
                 binding.rvSearch.adapter = adapter
-                binding.etSearch.bringToFront()
             }
 
     }

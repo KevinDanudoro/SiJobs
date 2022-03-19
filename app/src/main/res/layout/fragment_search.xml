@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FBFBFB"
-    tools:context=".SearchFragment">
+    tools:context=".SearchFragment"
+    tools:layout_editor_absoluteX="-26dp"
+    tools:layout_editor_absoluteY="-296dp">
 
     <EditText
         android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
-        android:layout_marginEnd="78dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="78dp"
         android:autofillHints=""
         android:background="@drawable/bg_search"
         android:fontFamily="@font/roboto"
@@ -49,34 +51,33 @@
         android:id="@+id/iv_time1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_time1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_search"/>
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/et_search" />
 
     <TextView
         android:id="@+id/tv_pengasuh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Pengasuh anak"
         android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_time1"
         app:layout_constraintStart_toEndOf="@+id/iv_time1"
-        app:layout_constraintTop_toTopOf="@id/iv_time1"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_time1"/>
+        app:layout_constraintTop_toTopOf="@id/iv_time1" />
 
     <ImageView
         android:id="@+id/iv_line"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="2dp"
-        android:src="@drawable/shape_linesearch"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_pengasuh"/>
+        android:src="@drawable/shape_linesearch"
+        app:layout_constraintEnd_toEndOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/tv_pengasuh" />
 
     <ImageView
         android:id="@+id/iv_time2"
@@ -85,30 +86,30 @@
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_time1"
         app:layout_constraintStart_toStartOf="@id/iv_time1"
-        app:layout_constraintTop_toBottomOf="@id/iv_line"/>
+        app:layout_constraintTop_toBottomOf="@id/iv_line" />
 
     <TextView
         android:id="@+id/tv_designer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Designer logo"
         android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_time2"
         app:layout_constraintStart_toEndOf="@id/iv_time2"
-        app:layout_constraintTop_toTopOf="@id/iv_time2"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_time2"/>
+        app:layout_constraintTop_toTopOf="@id/iv_time2" />
 
     <ImageView
         android:id="@+id/iv_line1"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="2dp"
-        android:src="@drawable/shape_linesearch"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_designer"/>
+        android:src="@drawable/shape_linesearch"
+        app:layout_constraintEnd_toEndOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/tv_designer" />
 
     <ImageView
         android:id="@+id/iv_time3"
@@ -117,213 +118,240 @@
         android:layout_marginTop="15dp"
         android:src="@drawable/ic_time1"
         app:layout_constraintStart_toStartOf="@id/iv_time2"
-        app:layout_constraintTop_toBottomOf="@id/iv_line1"/>
+        app:layout_constraintTop_toBottomOf="@id/iv_line1" />
 
     <TextView
         android:id="@+id/tv_urusan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:textSize="12sp"
         android:fontFamily="@font/roboto"
         android:text="Urusan rumah"
         android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_time3"
         app:layout_constraintStart_toEndOf="@id/iv_time3"
-        app:layout_constraintTop_toTopOf="@id/iv_time3"
-        app:layout_constraintBottom_toBottomOf="@id/iv_time3"/>
+        app:layout_constraintTop_toTopOf="@id/iv_time3" />
 
     <ImageView
         android:id="@+id/iv_line2"
-        android:layout_width="350dp"
+        android:layout_width="0dp"
         android:layout_height="2dp"
-        android:src="@drawable/shape_linesearch"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_urusan"/>
+        android:src="@drawable/shape_linesearch"
+        app:layout_constraintEnd_toEndOf="@+id/btn_search"
+        app:layout_constraintStart_toStartOf="@+id/et_search"
+        app:layout_constraintTop_toBottomOf="@id/tv_urusan" />
 
 
     <TextView
         android:id="@+id/tv_jobesuggest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="50dp"
-        android:textSize="15sp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Job type suggestion"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_time3"
         app:layout_constraintTop_toBottomOf="@id/iv_line2" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_1"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cv_2"
-        app:layout_constraintTop_toBottomOf="@id/tv_jobesuggest">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Isi kuisoner"
-            android:layout_gravity="center"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_2"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        app:cardCornerRadius="10dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/shape_job_box"
+        android:padding="10dp"
+        android:translationZ="1dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cv_1"
-        app:layout_constraintTop_toBottomOf="@id/tv_jobesuggest">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Pengasuh anak"
-            android:layout_gravity="center"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_3"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cv_4"
-        app:layout_constraintTop_toBottomOf="@id/cv_1">
+        app:layout_constraintTop_toBottomOf="@+id/tv_jobesuggest">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Isi kuisoner"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_1"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginVertical="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_3"
+            app:layout_constraintEnd_toStartOf="@id/cv_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Isi kuisoner"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_4"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cv_3"
-        app:layout_constraintTop_toBottomOf="@id/cv_2">
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Pengasuh anak"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_2"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginVertical="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/cv_1"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Pengasuh anak"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_5"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cv_6"
-        app:layout_constraintTop_toBottomOf="@id/cv_3">
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Isi kuisoner"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_3"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_5"
+            app:layout_constraintEnd_toEndOf="@+id/cv_1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_1"
+            app:layout_constraintTop_toBottomOf="@+id/cv_1">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Isi kuisoner"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_6"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cv_5"
-        app:layout_constraintTop_toBottomOf="@id/cv_4">
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Pengasuh anak"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_4"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_6"
+            app:layout_constraintEnd_toEndOf="@+id/cv_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_2"
+            app:layout_constraintTop_toBottomOf="@+id/cv_2">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Pengasuh anak"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_7"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cv_8"
-        app:layout_constraintTop_toBottomOf="@id/cv_5">
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Isi kuisoner"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_5"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_7"
+            app:layout_constraintEnd_toEndOf="@+id/cv_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_3"
+            app:layout_constraintTop_toBottomOf="@+id/cv_3">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Isi kuisoner"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_8"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cv_7"
-        app:layout_constraintTop_toBottomOf="@id/cv_6">
+        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:fontFamily="@font/roboto"
-            android:textColor="@color/black"
-            android:text="Pengasuh anak"
-            android:layout_gravity="center"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_6"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cv_8"
+            app:layout_constraintEnd_toEndOf="@+id/cv_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_4"
+            app:layout_constraintTop_toBottomOf="@+id/cv_4">
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Pengasuh anak"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
+        </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_7"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cv_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_5"
+            app:layout_constraintTop_toBottomOf="@+id/cv_5">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Isi kuisoner"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_8"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cv_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/cv_6"
+            app:layout_constraintTop_toBottomOf="@+id/cv_6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Pengasuh anak"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
