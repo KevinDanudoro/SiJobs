@@ -295,254 +295,494 @@
         app:layout_constraintEnd_toEndOf="@+id/iv_search"
         app:layout_constraintTop_toTopOf="@+id/tv_history" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_history"
+    <HorizontalScrollView
         android:layout_width="0dp"
-        android:layout_height="210dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:orientation="horizontal"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_history" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_lisa"
-        android:layout_width="135dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_history">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="@drawable/shape_login_btn"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_nameLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
-                android:fontFamily="@font/roboto"
-                android:text="Ainsley Lisa"
-                android:textColor="@color/white"
-                android:textSize="11sp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_lisa"
+                android:layout_width="135dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tv_doneLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/roboto"
-                android:text="(Done)"
-                android:textColor="@color/white"
-                android:textSize="6sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_nameLisa"
-                app:layout_constraintStart_toEndOf="@+id/tv_nameLisa"
-                app:layout_constraintTop_toTopOf="@+id/tv_nameLisa" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/shape_login_btn"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                android:id="@+id/tv_jobLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Designer"
-                android:textColor="@color/primary_yellow"
-                android:textSize="9sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_nameLisa"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nameLisa" />
+                    <TextView
+                        android:id="@+id/tv_nameLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Ainsley Lisa"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_starAetherLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/im_star"
-                app:layout_constraintStart_toStartOf="@+id/tv_jobLisa"
-                app:layout_constraintTop_toBottomOf="@+id/tv_jobLisa" />
+                    <TextView
+                        android:id="@+id/tv_doneLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="(Done)"
+                        android:textColor="@color/white"
+                        android:textSize="6sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_nameLisa"
+                        app:layout_constraintStart_toEndOf="@+id/tv_nameLisa"
+                        app:layout_constraintTop_toTopOf="@+id/tv_nameLisa" />
 
-            <ImageView
-                android:id="@+id/iv_timeAetherLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/ic_time"
-                app:layout_constraintStart_toStartOf="@+id/iv_starAetherLisa"
-                app:layout_constraintTop_toBottomOf="@+id/iv_starAetherLisa" />
+                    <TextView
+                        android:id="@+id/tv_jobLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Designer"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="9sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_nameLisa"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameLisa" />
 
-            <TextView
-                android:id="@+id/tv_timeAetherLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/roboto"
-                android:text="17 Februari 2022"
-                android:textColor="@color/primary_yellow"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_timeAetherLisa"
-                app:layout_constraintStart_toEndOf="@+id/iv_timeAetherLisa"
-                app:layout_constraintTop_toTopOf="@+id/iv_timeAetherLisa" />
+                    <ImageView
+                        android:id="@+id/iv_starLewisAetherLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/im_star"
+                        app:layout_constraintStart_toStartOf="@+id/tv_jobLisa"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jobLisa" />
 
-            <TextView
-                android:id="@+id/tv_reviewLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Give Review"
-                android:textColor="@color/white"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                    <ImageView
+                        android:id="@+id/iv_timeLewisAetherLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintStart_toStartOf="@+id/iv_starLewisAetherLisa"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_starLewisAetherLisa" />
 
-            <ImageView
-                android:id="@+id/iv_lovedLisa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_loved"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                    <TextView
+                        android:id="@+id/tv_timeLewisAetherLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="17 Februari 2022"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="7sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_timeLewisAetherLisa"
+                        app:layout_constraintStart_toEndOf="@+id/iv_timeLewisAetherLisa"
+                        app:layout_constraintTop_toTopOf="@+id/iv_timeLewisAetherLisa" />
+
+                    <TextView
+                        android:id="@+id/tv_reviewLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Give Review"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_lovedLisa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_loved"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
 
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avaLisa"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/im_lisa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_aether"
+                app:layout_constraintStart_toEndOf="@+id/cl_lisa"
+                app:layout_constraintTop_toTopOf="@+id/cl_lisa"
+                android:layout_marginStart="20dp"
+                android:layout_width="135dp"
+                android:layout_height="200dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/shape_login_btn"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_nameAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Aether"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_doneAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="(Done)"
+                        android:textColor="@color/white"
+                        android:textSize="6sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_nameAether"
+                        app:layout_constraintStart_toEndOf="@+id/tv_nameAether"
+                        app:layout_constraintTop_toTopOf="@+id/tv_nameAether" />
+
+                    <TextView
+                        android:id="@+id/tv_jobAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Kurir"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="9sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_nameAether"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameAether"/>
+
+                    <ImageView
+                        android:id="@+id/iv_starLewisAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/im_star"
+                        app:layout_constraintStart_toStartOf="@+id/tv_jobAether"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jobAether" />
+
+                    <ImageView
+                        android:id="@+id/iv_timeLewisAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintStart_toStartOf="@+id/iv_starLewisAether"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_starLewisAether" />
+
+                    <TextView
+                        android:id="@+id/tv_timeLewisAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="15 Februari 2022"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="7sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_timeLewisAether"
+                        app:layout_constraintStart_toEndOf="@+id/iv_timeLewisAether"
+                        app:layout_constraintTop_toTopOf="@+id/iv_timeLewisAether" />
+
+                    <TextView
+                        android:id="@+id/tv_reviewAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Give Review"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_lovedAether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_loved"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avaAether"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/im_aether"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_emma"
+                app:layout_constraintStart_toEndOf="@+id/cl_aether"
+                app:layout_constraintTop_toTopOf="@+id/cl_aether"
+                android:layout_marginStart="20dp"
+                android:layout_width="135dp"
+                android:layout_height="200dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/shape_login_btn"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_nameEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Emmanulle Proulx"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_doneEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="(Done)"
+                        android:textColor="@color/white"
+                        android:textSize="6sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_nameEmma"
+                        app:layout_constraintStart_toEndOf="@+id/tv_nameEmma"
+                        app:layout_constraintTop_toTopOf="@+id/tv_nameEmma" />
+
+                    <TextView
+                        android:id="@+id/tv_jobEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Kurir"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="9sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_nameEmma"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameEmma"/>
+
+                    <ImageView
+                        android:id="@+id/iv_starLewisEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/im_star"
+                        app:layout_constraintStart_toStartOf="@+id/tv_jobEmma"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jobEmma" />
+
+                    <ImageView
+                        android:id="@+id/iv_timeLewisEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintStart_toStartOf="@+id/iv_starLewisEmma"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_starLewisEmma" />
+
+                    <TextView
+                        android:id="@+id/tv_timeLewisEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="15 Februari 2022"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="7sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_timeLewisEmma"
+                        app:layout_constraintStart_toEndOf="@+id/iv_timeLewisEmma"
+                        app:layout_constraintTop_toTopOf="@+id/iv_timeLewisEmma" />
+
+                    <TextView
+                        android:id="@+id/tv_reviewEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Give Review"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_lovedEmma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_loved"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avaEmma"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/im_defaultprofile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_lewis"
+                app:layout_constraintStart_toEndOf="@+id/cl_emma"
+                app:layout_constraintTop_toTopOf="@+id/cl_emma"
+                android:layout_marginStart="20dp"
+                android:layout_width="135dp"
+                android:layout_height="200dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:background="@drawable/shape_login_btn"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <TextView
+                        android:id="@+id/tv_nameLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="10dp"
+                        android:text="Lewis Hamilton"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/roboto"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_doneLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="(Done)"
+                        android:textColor="@color/white"
+                        android:textSize="6sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_nameLewis"
+                        app:layout_constraintStart_toEndOf="@+id/tv_nameLewis"
+                        app:layout_constraintTop_toTopOf="@+id/tv_nameLewis" />
+
+                    <TextView
+                        android:id="@+id/tv_jobLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Kurir"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="9sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_nameLewis"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameLewis"/>
+
+                    <ImageView
+                        android:id="@+id/iv_starLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/im_star"
+                        app:layout_constraintStart_toStartOf="@+id/tv_jobLewis"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jobLewis" />
+
+                    <ImageView
+                        android:id="@+id/iv_timeLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_time"
+                        app:layout_constraintStart_toStartOf="@+id/iv_starLewis"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_starLewis" />
+
+                    <TextView
+                        android:id="@+id/tv_timeLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="time"
+                        android:textColor="@color/primary_yellow"
+                        android:textSize="7sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_timeLewis"
+                        app:layout_constraintStart_toEndOf="@+id/iv_timeLewis"
+                        app:layout_constraintTop_toTopOf="@+id/iv_timeLewis" />
+
+                    <TextView
+                        android:id="@+id/tv_reviewLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Give Review"
+                        android:textColor="@color/white"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_lovedLewis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/ic_loved"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avaLewis"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/im_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_avaLisa"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/im_lisa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_aether"
-        app:layout_constraintStart_toEndOf="@+id/cl_lisa"
-        app:layout_constraintTop_toTopOf="@+id/cl_lisa"
-        android:layout_marginStart="20dp"
-        android:layout_width="135dp"
-        android:layout_height="200dp">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:background="@drawable/shape_login_btn"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <TextView
-                android:id="@+id/tv_nameAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="10dp"
-                android:text="Aether"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:fontFamily="@font/roboto"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_doneAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/roboto"
-                android:text="(Done)"
-                android:textColor="@color/white"
-                android:textSize="6sp"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_nameAether"
-                app:layout_constraintStart_toEndOf="@+id/tv_nameAether"
-                app:layout_constraintTop_toTopOf="@+id/tv_nameAether" />
-
-            <TextView
-                android:id="@+id/tv_jobAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Kurir"
-                android:textColor="@color/primary_yellow"
-                android:textSize="9sp"
-                app:layout_constraintStart_toStartOf="@+id/tv_nameAether"
-                app:layout_constraintTop_toBottomOf="@+id/tv_nameAether"/>
-
-            <ImageView
-                android:id="@+id/iv_starAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/im_star"
-                app:layout_constraintStart_toStartOf="@+id/tv_jobAether"
-                app:layout_constraintTop_toBottomOf="@+id/tv_jobAether" />
-
-            <ImageView
-                android:id="@+id/iv_timeAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/ic_time"
-                app:layout_constraintStart_toStartOf="@+id/iv_starAether"
-                app:layout_constraintTop_toBottomOf="@+id/iv_starAether" />
-
-            <TextView
-                android:id="@+id/tv_timeAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:fontFamily="@font/roboto"
-                android:text="15 Februari 2022"
-                android:textColor="@color/primary_yellow"
-                android:textSize="7sp"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_timeAether"
-                app:layout_constraintStart_toEndOf="@+id/iv_timeAether"
-                app:layout_constraintTop_toTopOf="@+id/iv_timeAether" />
-
-            <TextView
-                android:id="@+id/tv_reviewAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:fontFamily="@font/roboto_bold"
-                android:text="Give Review"
-                android:textColor="@color/white"
-                android:textSize="9sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageView
-                android:id="@+id/iv_lovedAether"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_loved"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_avaProfile"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/im_aether"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    </HorizontalScrollView>
 
 
 
