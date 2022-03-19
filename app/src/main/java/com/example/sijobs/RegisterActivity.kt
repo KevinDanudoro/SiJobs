@@ -27,9 +27,9 @@ class RegisterActivity : AppCompatActivity() {
     // Firebaseauth
     private lateinit var firebaseauth: FirebaseAuth
 
-    // Apa username perlu diinputkan pada app freelancer?
+    // Apa name perlu diinputkan pada app freelancer?
     // Mending first name aja ga sih?
-    private lateinit var username: String
+    private lateinit var name: String
     private lateinit var dateOfBirth: String
     private lateinit var gender: String
     private lateinit var address: String
@@ -58,7 +58,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun validasiData() {
         email = binding.emailInput.text.toString().trim()
         password = binding.passInput.text.toString().trim()
-        username = binding.usernameInput.text.toString().trim()
+        name = binding.nameInput.text.toString().trim()
         dateOfBirth = binding.birthInput.text.toString().trim()
         gender = binding.spGender.selectedItem.toString()
         address = binding.addressInput.text.toString().trim()
@@ -78,13 +78,13 @@ class RegisterActivity : AppCompatActivity() {
             binding.passInput.error = "Please enter your password"
             isError = true
         }
-        else if(password.length < 6){
+        else if(password.length < 7){
             binding.passInput.error = "Password at least has 7 character"
             isError = true
         }
 
-        if(TextUtils.isEmpty(username)){
-            binding.usernameInput.error = "Please enter your username"
+        if(TextUtils.isEmpty(name)){
+            binding.nameInput.error = "Please enter your name"
             isError = true
         }
 
@@ -123,13 +123,13 @@ class RegisterActivity : AppCompatActivity() {
         val uid = firebaseauth.currentUser!!.uid
         val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/users/$uid")
 
-        val user = UserData(uid, email, username, username, dateOfBirth, gender, address, "null")
+        val user = UserData(uid, email, name, dateOfBirth, gender, address, "null")
         ref.setValue(user)
             .addOnSuccessListener {
-                Log.d("Register", "Data $username berhasil disimpan")
+                Log.d("Register", "Data $name berhasil disimpan")
             }
             .addOnFailureListener {
-                Log.d("Register", "Data $username gagal disimpan")
+                Log.d("Register", "Data $name gagal disimpan")
             }
     }
 

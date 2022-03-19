@@ -1,23 +1,24 @@
 package com.example.sijobs
 
-import android.content.ClipData
 import android.os.Bundle
+import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-//import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.example.sijobs.databinding.FragmentProfileBinding
-import com.example.sijobs.databinding.FragmentSearchBinding
+import android.widget.EditText
 import com.example.sijobs.databinding.FragmentSearchResultBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import java.security.acl.Group
+import java.security.Key
 
 class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
 
     private var _binding: FragmentSearchResultBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var firebaseDatabase: FirebaseDatabase
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,22 +31,40 @@ class SearchResultFragment : Fragment(R.layout.fragment_search_result) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // mengambil data pada database
-        val ref = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/").getReference("/jobs/").get()
+        firebaseDatabase = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+        firebaseAuth = FirebaseAuth.getInstance()
 
-        var jobs = mutableListOf(
-            Search("Koki"),
-            Search("Polisi"),
-            Search("Tukang Kebun"),
-            Search("Kuli"),
-            Search("Dokter"),
-            Search("Perawat"),
-            Search("Buruh"),
-        )
+        binding.etSearch.setOnKeyListener(View.OnKeyListener{view, keycode, event ->
+            if(keycode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP){
+                return@OnKeyListener true
+            }
+            false
+        })
 
-        val adapter = SearchAdapter(jobs)
-        binding.rvSearch.adapter = adapter
-        binding.etSearch.bringToFront()
+        bindingJobsDataFromDatabase()
+    }
+
+    private fun bindingJobsDataFromDatabase() {
+
+        var rvJobs = mutableListOf<Search>()
+
+        val ref = firebaseDatabase.getReference("/jobs")
+        ref.get()
+            .addOnSuccessListener { allUsersJob ->
+                allUsersJob.children.forEach { usersJob ->
+                    if (usersJob.child("uid").value.toString() != firebaseAuth.currentUser!!.uid){
+                        usersJob.children.forEach {
+                            if (it.value.toString() != usersJob.child("uid").value.toString())
+                                rvJobs.add(Search(it.value.toString()))
+                        }
+                    }
+                }
+
+                val adapter = SearchAdapter(rvJobs)
+                binding.rvSearch.adapter = adapter
+                binding.etSearch.bringToFront()
+            }
+
     }
 
     override fun onDestroy() {

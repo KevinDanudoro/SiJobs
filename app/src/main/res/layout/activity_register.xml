@@ -53,11 +53,11 @@
 
 
         <EditText
-            android:id="@+id/usernameInput"
+            android:id="@+id/nameInput"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:autofillHints=""
-            android:hint="@string/username"
+            android:hint="Name"
             android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/emailInput"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +75,7 @@
             app:layout_constraintBottom_toTopOf="@+id/birthInput"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/usernameInput" />
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
 
         <EditText

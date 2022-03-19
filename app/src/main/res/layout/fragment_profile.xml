@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_gray"
-    tools:context=".ProfileActivity">
+    android:background="@color/primary_gray">
 
 
     <!--      app:layout_constraintDimensionRatio="2:1"-->
@@ -325,35 +324,35 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/skill1"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/shape_login_btn"
             android:gravity="center"
-            android:text="Lorem"
             android:textColor="@color/white"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/skill3"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/skill3"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:background="@drawable/shape_login_btn"
             android:gravity="center"
-            android:text="Lorem"
             android:textColor="@color/white"
             android:textAlignment="center"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView12"
+            app:layout_constraintEnd_toEndOf="@+id/skill1"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/textView12"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            app:layout_constraintStart_toStartOf="@+id/skill1"
+            app:layout_constraintTop_toBottomOf="@+id/skill1" />
 
         <!--    <TextView-->
         <!--        android:id="@+id/textView14"-->
@@ -364,10 +363,10 @@
         <!--        android:text="Lorem"-->
         <!--        android:textAlignment="center"-->
         <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="@+id/textView13"-->
+        <!--        app:layout_constraintEnd_toEndOf="@+id/skill3"-->
         <!--        app:layout_constraintHorizontal_bias="0.0"-->
-        <!--        app:layout_constraintStart_toStartOf="@+id/textView13"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/textView13" />-->
+        <!--        app:layout_constraintStart_toStartOf="@+id/skill3"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/skill3" />-->
 
         <!--    <TextView-->
         <!--        android:id="@+id/textView17"-->
@@ -378,41 +377,41 @@
         <!--        android:text="Lorem"-->
         <!--        android:textAlignment="center"-->
         <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="@+id/textView15"-->
+        <!--        app:layout_constraintEnd_toEndOf="@+id/skill4"-->
         <!--        app:layout_constraintHorizontal_bias="0.5"-->
-        <!--        app:layout_constraintStart_toStartOf="@+id/textView15"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+        <!--        app:layout_constraintStart_toStartOf="@+id/skill4"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/skill4" />-->
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/skill2"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_marginHorizontal="20dp"
             android:background="@drawable/shape_login_btn"
             android:gravity="center"
-            android:text="Lorem"
             android:textAlignment="center"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/skill4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline12"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/skill4"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:background="@drawable/shape_login_btn"
             android:gravity="center"
-            android:text="Lorem"
             android:textColor="@color/white"
             android:textAlignment="center"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="@+id/skill2"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/textView16"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintStart_toStartOf="@+id/skill2"
+            app:layout_constraintTop_toBottomOf="@+id/skill2" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline12"
