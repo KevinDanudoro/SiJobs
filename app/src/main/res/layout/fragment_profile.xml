@@ -7,9 +7,6 @@
     android:background="@color/primary_gray"
     tools:context=".ProfileFragment">
 
-
-    <!--      app:layout_constraintDimensionRatio="2:1"-->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -358,34 +355,6 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/skill1"
             app:layout_constraintTop_toBottomOf="@+id/skill1" />
-
-        <!--    <TextView-->
-        <!--        android:id="@+id/textView14"-->
-        <!--        android:layout_width="0dp"-->
-        <!--        android:layout_height="30dp"-->
-        <!--        android:background="@drawable/shape_login_box"-->
-        <!--        android:gravity="center"-->
-        <!--        android:text="Lorem"-->
-        <!--        android:textAlignment="center"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="@+id/skill3"-->
-        <!--        app:layout_constraintHorizontal_bias="0.0"-->
-        <!--        app:layout_constraintStart_toStartOf="@+id/skill3"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/skill3" />-->
-
-        <!--    <TextView-->
-        <!--        android:id="@+id/textView17"-->
-        <!--        android:layout_width="0dp"-->
-        <!--        android:layout_height="30dp"-->
-        <!--        android:background="@drawable/shape_login_box"-->
-        <!--        android:gravity="center"-->
-        <!--        android:text="Lorem"-->
-        <!--        android:textAlignment="center"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="@+id/skill4"-->
-        <!--        app:layout_constraintHorizontal_bias="0.5"-->
-        <!--        app:layout_constraintStart_toStartOf="@+id/skill4"-->
-        <!--        app:layout_constraintTop_toBottomOf="@+id/skill4" />-->
 
         <TextView
             android:id="@+id/skill2"

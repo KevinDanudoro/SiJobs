@@ -109,6 +109,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/lorem_job"
+                    android:fontFamily="@font/roboto"
                     android:textColor="#696974"
                     app:layout_constraintStart_toStartOf="@+id/tv_babySitter"
                     app:layout_constraintTop_toBottomOf="@+id/tv_babySitter"
@@ -168,6 +169,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
                     android:text="@string/lorem_job"
                     android:textColor="#696974"
                     app:layout_constraintStart_toStartOf="@+id/tv_influencer"
@@ -288,10 +290,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/lorem_job"
+                    android:fontFamily="@font/roboto"
                     android:textColor="#696974"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/tv_influencer1"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_influencer1"
-                    app:layout_constraintEnd_toEndOf="parent"/>
+                    app:layout_constraintTop_toBottomOf="@+id/tv_influencer1" />
 
                 <Button
                     android:layout_width="65dp"
@@ -347,6 +351,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/lorem_job"
                     android:textColor="#696974"
+                    android:fontFamily="@font/roboto"
                     app:layout_constraintStart_toStartOf="@+id/textView9"
                     app:layout_constraintTop_toBottomOf="@+id/textView9"
                     app:layout_constraintEnd_toEndOf="parent"/>

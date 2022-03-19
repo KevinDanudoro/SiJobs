@@ -31,6 +31,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        firebaseAuth = FirebaseAuth.getInstance()
+        firebaseDatabase = FirebaseDatabase.getInstance("https://si-jobs-b923c-default-rtdb.asia-southeast1.firebasedatabase.app/")
+
+        loadUserDataFromDatabase()
     }
 
     private fun loadUserDataFromDatabase() {
@@ -40,7 +44,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             .addOnSuccessListener {
                 val imageUrl = it.child("imageUrl").value.toString()
                 val name = it.child("name").value.toString()
-                Log.d("Userdata", "Nama = $name, image = $imageUrl")
 
                 bindingUserData(name, imageUrl)
             }

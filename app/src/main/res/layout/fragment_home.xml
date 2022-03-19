@@ -10,9 +10,9 @@
         android:id="@+id/tv_profilePic"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/im_defaultprofile"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/im_defaultprofile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,8 +23,8 @@
         android:layout_marginStart="30dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Hey, User"
-        android:textSize="15sp"
         android:textColor="@color/black"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_profilePic"
         app:layout_constraintStart_toEndOf="@+id/tv_profilePic"
         app:layout_constraintTop_toTopOf="@+id/tv_profilePic" />
@@ -43,7 +43,7 @@
         android:id="@+id/tv_discover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/let_s_discover_your"
         android:textColor="@color/black"
@@ -276,7 +276,7 @@
         android:id="@+id/tv_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/history"
         android:textColor="@color/black"
@@ -289,8 +289,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/view_all"
-        android:textSize="12sp"
         android:textColor="@color/primary_yellow"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tv_history"
         app:layout_constraintEnd_toEndOf="@+id/iv_search"
         app:layout_constraintTop_toTopOf="@+id/tv_history" />
@@ -298,8 +298,9 @@
     <HorizontalScrollView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_history">
@@ -428,11 +429,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_aether"
-                app:layout_constraintStart_toEndOf="@+id/cl_lisa"
-                app:layout_constraintTop_toTopOf="@+id/cl_lisa"
-                android:layout_marginStart="20dp"
                 android:layout_width="135dp"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/cl_lisa"
+                app:layout_constraintTop_toTopOf="@+id/cl_lisa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -444,12 +445,12 @@
                         android:id="@+id/tv_nameAether"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/roboto"
                         android:text="@string/aether"
                         android:textColor="@color/white"
                         android:textSize="11sp"
-                        android:fontFamily="@font/roboto"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -475,7 +476,7 @@
                         android:textColor="@color/primary_yellow"
                         android:textSize="9sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_nameAether"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_nameAether"/>
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameAether" />
 
                     <ImageView
                         android:id="@+id/iv_starLewisAether"
@@ -540,17 +541,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_emma"
-                app:layout_constraintStart_toEndOf="@+id/cl_aether"
-                app:layout_constraintTop_toTopOf="@+id/cl_aether"
-                android:layout_marginStart="20dp"
                 android:layout_width="135dp"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/cl_aether"
+                app:layout_constraintTop_toTopOf="@+id/cl_aether">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -562,12 +563,12 @@
                         android:id="@+id/tv_nameEmma"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/roboto"
                         android:text="@string/emmanuelle_proulx"
                         android:textColor="@color/white"
                         android:textSize="11sp"
-                        android:fontFamily="@font/roboto"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -593,7 +594,7 @@
                         android:textColor="@color/primary_yellow"
                         android:textSize="9sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_nameEmma"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_nameEmma"/>
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameEmma" />
 
                     <ImageView
                         android:id="@+id/iv_starLewisEmma"
@@ -658,17 +659,17 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_lewis"
-                app:layout_constraintStart_toEndOf="@+id/cl_emma"
-                app:layout_constraintTop_toTopOf="@+id/cl_emma"
-                android:layout_marginStart="20dp"
                 android:layout_width="135dp"
-                android:layout_height="200dp">
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toEndOf="@+id/cl_emma"
+                app:layout_constraintTop_toTopOf="@+id/cl_emma">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -680,12 +681,12 @@
                         android:id="@+id/tv_nameLewis"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="50dp"
                         android:layout_marginStart="10dp"
+                        android:layout_marginTop="50dp"
+                        android:fontFamily="@font/roboto"
                         android:text="@string/lewis_hamilton"
                         android:textColor="@color/white"
                         android:textSize="11sp"
-                        android:fontFamily="@font/roboto"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -711,7 +712,7 @@
                         android:textColor="@color/primary_yellow"
                         android:textSize="9sp"
                         app:layout_constraintStart_toStartOf="@+id/tv_nameLewis"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_nameLewis"/>
+                        app:layout_constraintTop_toBottomOf="@+id/tv_nameLewis" />
 
                     <ImageView
                         android:id="@+id/iv_starLewis"
@@ -776,14 +777,20 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-            
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </HorizontalScrollView>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="116dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
